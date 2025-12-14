@@ -1,0 +1,92 @@
+[gd_scene load_steps=20 format=3 uid="uid://4v1cdva73ae5"]
+
+[ext_resource type="PackedScene" uid="uid://2qpwar6gseyj" path="res://Scenes/Objects/Resources/Flora/flora.tscn" id="1_ulagg"]
+[ext_resource type="Texture2D" uid="uid://bbm0uml4ktl7c" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0001.png" id="2_wqd1o"]
+[ext_resource type="Texture2D" uid="uid://6f786kyjh64i" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0003.png" id="3_gvqpo"]
+[ext_resource type="Texture2D" uid="uid://brpqrxjnly7fi" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0005.png" id="4_1pl7a"]
+[ext_resource type="Texture2D" uid="uid://dqtqx3qgfrk4n" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0007.png" id="5_c4lcp"]
+[ext_resource type="Texture2D" uid="uid://dmjk6pgwsxyfe" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0009.png" id="6_umr2b"]
+[ext_resource type="Texture2D" uid="uid://bwkv2t7rfnqrl" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0011.png" id="7_xb05c"]
+[ext_resource type="Texture2D" uid="uid://c8gngp6qccfea" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0013.png" id="8_ab72h"]
+[ext_resource type="Texture2D" uid="uid://bu5j2b4yvabry" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0015.png" id="9_kmtsp"]
+[ext_resource type="Texture2D" uid="uid://c7mfa0dl5887e" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0017.png" id="10_xikyk"]
+[ext_resource type="Texture2D" uid="uid://dhmk74ngvsxkh" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0019.png" id="11_nb8io"]
+[ext_resource type="Texture2D" uid="uid://d0d5ielkqj87d" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0021.png" id="12_otrsi"]
+[ext_resource type="Texture2D" uid="uid://687enynngxex" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0023.png" id="13_si6xm"]
+[ext_resource type="Texture2D" uid="uid://clmrno3rs0dea" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0025.png" id="14_lwtfl"]
+[ext_resource type="Texture2D" uid="uid://87tbhbdf8l5y" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0027.png" id="15_yrxe7"]
+[ext_resource type="Texture2D" uid="uid://goifkf63jo2d" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0029.png" id="16_r305l"]
+[ext_resource type="Texture2D" uid="uid://7xe20s1we46i" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/straw explosion/0031.png" id="17_d7cpr"]
+[ext_resource type="Texture2D" uid="uid://bu0epphjdno7g" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Misc E5_E.png" id="18_1mtcv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74xig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wqd1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gvqpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1pl7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c4lcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_umr2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xb05c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ab72h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kmtsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xikyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nb8io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_otrsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_si6xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lwtfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yrxe7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_r305l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_d7cpr")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_1mtcv")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="LargeHay" instance=ExtResource("1_ulagg")]
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_74xig")
+animation = &"destroyed"
+frame = 15
+frame_progress = 1.0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://2qpwar6gseyj"]
+
+[ext_resource type="PackedScene" uid="uid://beco5oqe0ef3b" path="res://Scenes/Objects/Resources/resource.tscn" id="1_6tkga"]
+[ext_resource type="Script" path="res://Scenes/Objects/Resources/Flora/flora.gd" id="2_7qs0q"]
+
+[node name="Flora" instance=ExtResource("1_6tkga")]
+script = ExtResource("2_7qs0q")
+level = 1
+
+[node name="LifeTimer" parent="." index="2"]
+wait_time = 120.0

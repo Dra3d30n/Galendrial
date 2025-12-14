@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://88cjugd4ejqh"]
+
+[ext_resource type="PackedScene" uid="uid://cmo6hejkfnt6j" path="res://Scenes/Objects/object.tscn" id="1_aaicb"]
+[ext_resource type="Script" path="res://Scenes/Objects/DroppedItem/dropped_item.gd" id="2_fya24"]
+[ext_resource type="Texture2D" uid="uid://dclei30p74j50" path="res://Assets/Map/FantasyTilesetGameReady/Other/ItemRay.png" id="2_t5e10"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jjg74"]
+radius = 46.0109
+
+[node name="DroppedItem" instance=ExtResource("1_aaicb")]
+script = ExtResource("2_fya24")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_jjg74")
+
+[node name="ItemRay" type="Sprite2D" parent="." index="1"]
+position = Vector2(0, -300)
+texture = ExtResource("2_t5e10")

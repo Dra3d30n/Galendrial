@@ -22,6 +22,7 @@ var animations={
 	"mine":"Attack4",
 	"chop":"Attack2",
 	"hit":"Hit",
+	"collect":"Taunt"
 	
 }
 var base_stats := {

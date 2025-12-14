@@ -1,0 +1,92 @@
+[gd_scene load_steps=20 format=3 uid="uid://bwvx00o5nti0x"]
+
+[ext_resource type="PackedScene" uid="uid://2qpwar6gseyj" path="res://Scenes/Objects/Resources/Flora/flora.tscn" id="1_h3jds"]
+[ext_resource type="Texture2D" uid="uid://dw4o5337bd3s1" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0001.png" id="2_s0gch"]
+[ext_resource type="Texture2D" uid="uid://bk0swv37m1eaw" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0003.png" id="3_s2gj1"]
+[ext_resource type="Texture2D" uid="uid://djoge1d75lphc" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0005.png" id="4_o22k0"]
+[ext_resource type="Texture2D" uid="uid://8slbac8fkxmk" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0007.png" id="5_aatdj"]
+[ext_resource type="Texture2D" uid="uid://ug56e6jjeb4i" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0009.png" id="6_aevt1"]
+[ext_resource type="Texture2D" uid="uid://iybvpav0j246" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0011.png" id="7_d6wol"]
+[ext_resource type="Texture2D" uid="uid://dsnqijmd8kv5c" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0013.png" id="8_ocqmt"]
+[ext_resource type="Texture2D" uid="uid://dlkg2ifn04bg8" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0015.png" id="9_5r7g7"]
+[ext_resource type="Texture2D" uid="uid://eeplxqqwogqu" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0017.png" id="10_o462t"]
+[ext_resource type="Texture2D" uid="uid://dqnsio4k746t7" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0019.png" id="11_jug7v"]
+[ext_resource type="Texture2D" uid="uid://dokv02klhr878" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0021.png" id="12_2pqu7"]
+[ext_resource type="Texture2D" uid="uid://buc3wruk052yw" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0023.png" id="13_2sc0t"]
+[ext_resource type="Texture2D" uid="uid://jsv2scuj12vj" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0025.png" id="14_8p63w"]
+[ext_resource type="Texture2D" uid="uid://0jw68yyblbe5" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0027.png" id="15_r1yws"]
+[ext_resource type="Texture2D" uid="uid://4etwhobjbsnd" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0029.png" id="16_mktmo"]
+[ext_resource type="Texture2D" uid="uid://b3fql61deerfc" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/grass explosion large/0031.png" id="17_suavm"]
+[ext_resource type="Texture2D" uid="uid://72kmkx60fdfl" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Flora B1_S.png" id="18_bos4t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xnt8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s0gch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s2gj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o22k0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_aatdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_aevt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d6wol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ocqmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5r7g7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_o462t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jug7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2pqu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2sc0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8p63w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_r1yws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mktmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_suavm")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_bos4t")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="LargeGrass" instance=ExtResource("1_h3jds")]
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_xnt8e")
+animation = &"destroyed"
+frame = 15
+frame_progress = 1.0
