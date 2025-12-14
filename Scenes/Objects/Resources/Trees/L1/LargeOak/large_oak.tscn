@@ -1,0 +1,96 @@
+[gd_scene load_steps=20 format=3 uid="uid://d830rlnv7cc5"]
+
+[ext_resource type="PackedScene" uid="uid://b3xylecf600kx" path="res://Scenes/Objects/Resources/Trees/tree.tscn" id="1_cl031"]
+[ext_resource type="Texture2D" uid="uid://csr2j0f3fhq48" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0001.png" id="2_m76ye"]
+[ext_resource type="Texture2D" uid="uid://chij0gxgh4aw6" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0003.png" id="3_14u0e"]
+[ext_resource type="Texture2D" uid="uid://bq3k8xsi7vrgv" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0005.png" id="4_q21gw"]
+[ext_resource type="Texture2D" uid="uid://3pfa3tg1mvor" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0007.png" id="5_eqw0q"]
+[ext_resource type="Texture2D" uid="uid://dctkljrkykn17" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0009.png" id="6_cpfat"]
+[ext_resource type="Texture2D" uid="uid://lu2udo3251mr" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0011.png" id="7_ragc5"]
+[ext_resource type="Texture2D" uid="uid://e5bhv2a1w72m" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0013.png" id="8_n31yx"]
+[ext_resource type="Texture2D" uid="uid://c03pixu7u7uwe" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0015.png" id="9_x4y2h"]
+[ext_resource type="Texture2D" uid="uid://ccghoidf4je37" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0017.png" id="10_0n2t4"]
+[ext_resource type="Texture2D" uid="uid://dhjwtydejbsor" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0019.png" id="11_hl1w6"]
+[ext_resource type="Texture2D" uid="uid://yaq65hbj1jxe" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0021.png" id="12_aaegm"]
+[ext_resource type="Texture2D" uid="uid://cv2w42g28mgu2" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0023.png" id="13_5eaq8"]
+[ext_resource type="Texture2D" uid="uid://bxla0qgpqol5y" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0025.png" id="14_s1b0j"]
+[ext_resource type="Texture2D" uid="uid://b8dm8f7oubqh2" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0027.png" id="15_6eeds"]
+[ext_resource type="Texture2D" uid="uid://dtcnp3j2vgc5m" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0029.png" id="16_b7l4x"]
+[ext_resource type="Texture2D" uid="uid://cf6vbufo4pxms" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Green Explosion/0031.png" id="17_o77u7"]
+[ext_resource type="Texture2D" uid="uid://c70x4msyvbvrc" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Tree A1_E.png" id="18_trnb1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m0rri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m76ye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_14u0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q21gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eqw0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cpfat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ragc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n31yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x4y2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0n2t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hl1w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_aaegm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5eaq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_s1b0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6eeds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_b7l4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_o77u7")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_trnb1")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="LargeOak" instance=ExtResource("1_cl031")]
+health = 18
+max_health = 18
+amount = 8
+item_id = 4
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_m0rri")
+animation = &"destroyed"
+frame = 15
+frame_progress = 1.0

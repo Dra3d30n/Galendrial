@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxgxqq75umsnw"]
+
+[ext_resource type="PackedScene" uid="uid://dcs62mx1bds05" path="res://Scenes/Objects/Interactables/interactable.tscn" id="1_t43v2"]
+[ext_resource type="Script" path="res://Scenes/Objects/Interactables/Crafting/crafter.gd" id="2_ylja0"]
+
+[node name="Crafter" instance=ExtResource("1_t43v2")]
+script = ExtResource("2_ylja0")
+
+[node name="Area2D" parent="." index="0"]
+z_index = 0

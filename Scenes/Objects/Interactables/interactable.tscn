@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcs62mx1bds05"]
+
+[ext_resource type="PackedScene" uid="uid://cmo6hejkfnt6j" path="res://Scenes/Objects/object.tscn" id="1_22e1f"]
+[ext_resource type="Script" path="res://Scenes/Objects/Interactables/interactable.gd" id="2_fma5b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrnam"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"ignored",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]
+
+[node name="Interactable" instance=ExtResource("1_22e1f")]
+script = ExtResource("2_fma5b")
+ui_scene_path = ""
+distance_threshold = 384.0
+state = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_nrnam")
+animation = &"interacted"

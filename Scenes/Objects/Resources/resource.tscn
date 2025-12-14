@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://beco5oqe0ef3b"]
+
+[ext_resource type="PackedScene" uid="uid://cmo6hejkfnt6j" path="res://Scenes/Objects/object.tscn" id="1_lgw7g"]
+[ext_resource type="Script" path="res://Scenes/Objects/Resources/resource.gd" id="2_822m1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjutb"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="Resource" instance=ExtResource("1_lgw7g")]
+script = ExtResource("2_822m1")
+health = 10
+max_health = 10
+amount = 0
+item_id = 0
+state = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_bjutb")
+animation = &"formed"
+
+[node name="LifeTimer" type="Timer" parent="." index="2"]
+wait_time = 10.0
+one_shot = true
+
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

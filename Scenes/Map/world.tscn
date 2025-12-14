@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcwvhs65onpug"]
+
+[ext_resource type="Script" path="res://Scenes/Map/world.gd" id="1_ti0v0"]
+[ext_resource type="PackedScene" uid="uid://ytkxjwq2b1lg" path="res://Scenes/Map/Map/map.tscn" id="2_2qrkl"]
+[ext_resource type="TileSet" uid="uid://5jujdxjxe70" path="res://Scenes/Map/objects.tres" id="3_llf5o"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_ti0v0")
+
+[node name="Map" parent="." instance=ExtResource("2_2qrkl")]
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="0" type="TileMapLayer" parent="Objects"]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 21, 0, 0, 0, 0, 0, 0, 0, 2, 0)
+tile_set = ExtResource("3_llf5o")
+
+[node name="1" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="2" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="3" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="4" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="5" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="6" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="7" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="8" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="9" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="10" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="11" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="12" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="13" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="14" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="15" type="TileMapLayer" parent="Objects"]
+tile_set = ExtResource("3_llf5o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.25, 0.25)

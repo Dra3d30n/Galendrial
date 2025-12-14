@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://b43n17ske8j04"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Main/LoginScreen/login_screen.gd" id="1_cdd34"]
+[ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_xqiw4"]
+[ext_resource type="Texture2D" uid="uid://d4mv62ivui5mt" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="3_y5d4l"]
+[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="4_40o1g"]
+
+[node name="LoginScreen" type="Node2D"]
+script = ExtResource("1_cdd34")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Join" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 267.0
+offset_top = 235.0
+offset_right = 307.0
+offset_bottom = 275.0
+scale = Vector2(4, 4)
+
+[node name="Join" type="TextureButton" parent="UI/Join"]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 15.0
+scale = Vector2(3, 1.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_xqiw4")
+texture_pressed = ExtResource("3_y5d4l")
+
+[node name="Label" type="Label" parent="UI/Join"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 77.0
+offset_bottom = 35.0
+text = "Join"
+label_settings = ExtResource("4_40o1g")
+
+[node name="Host" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 480.0
+offset_top = 234.0
+offset_right = 520.0
+offset_bottom = 274.0
+scale = Vector2(4, 4)
+
+[node name="Host" type="TextureButton" parent="UI/Host"]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 15.0
+scale = Vector2(3, 1.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource("2_xqiw4")
+texture_pressed = ExtResource("3_y5d4l")
+
+[node name="Label" type="Label" parent="UI/Host"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 77.0
+offset_bottom = 35.0
+text = "Host"
+label_settings = ExtResource("4_40o1g")
+
+[connection signal="pressed" from="UI/Join/Join" to="." method="_on_join_pressed"]
+[connection signal="pressed" from="UI/Host/Host" to="." method="_on_host_pressed"]

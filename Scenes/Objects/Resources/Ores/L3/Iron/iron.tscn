@@ -1,0 +1,104 @@
+[gd_scene load_steps=21 format=3 uid="uid://c5o531tb70eh5"]
+
+[ext_resource type="PackedScene" uid="uid://bwafw0b471xb0" path="res://Scenes/Objects/Resources/Ores/ore.tscn" id="1_mp8af"]
+[ext_resource type="Texture2D" uid="uid://dkdiexykghyu0" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0001.png" id="2_cveuq"]
+[ext_resource type="Texture2D" uid="uid://djop035uxrebf" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0003.png" id="3_u4y32"]
+[ext_resource type="Texture2D" uid="uid://qfera270a111" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0005.png" id="4_rllkm"]
+[ext_resource type="Texture2D" uid="uid://c4naajs7w7y6n" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0007.png" id="5_t3hsd"]
+[ext_resource type="Texture2D" uid="uid://dsw27pij7stgb" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0009.png" id="6_qlfaw"]
+[ext_resource type="Texture2D" uid="uid://dijx7n5pww23l" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0011.png" id="7_bi6dd"]
+[ext_resource type="Texture2D" uid="uid://cnntslpgh86nn" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0013.png" id="8_cnerl"]
+[ext_resource type="Texture2D" uid="uid://5mjvncs2eq8s" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0015.png" id="9_e0qh0"]
+[ext_resource type="Texture2D" uid="uid://dbbedpvifgjsn" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0017.png" id="10_oqd57"]
+[ext_resource type="Texture2D" uid="uid://dmsiwckin85bm" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0019.png" id="11_sg2l5"]
+[ext_resource type="Texture2D" uid="uid://bahq4m4krqsfg" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0021.png" id="12_osj2b"]
+[ext_resource type="Texture2D" uid="uid://b0bx7dvtyyjh0" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0023.png" id="13_nreql"]
+[ext_resource type="Texture2D" uid="uid://nyfwq34ta8rq" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0025.png" id="14_dptni"]
+[ext_resource type="Texture2D" uid="uid://cv7wo23cexdp0" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0027.png" id="15_0snq1"]
+[ext_resource type="Texture2D" uid="uid://dajqo3yv87g7k" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0029.png" id="16_xtlvd"]
+[ext_resource type="Texture2D" uid="uid://c1uvgm4iwiwe4" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0031.png" id="17_xrj5j"]
+[ext_resource type="Texture2D" uid="uid://cekyotfmjuqh1" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Stone A19_N.png" id="18_ky1od"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ol8qq"]
+radius = 32.0156
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rnqxb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cveuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u4y32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rllkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t3hsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qlfaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bi6dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cnerl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_e0qh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oqd57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sg2l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_osj2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nreql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dptni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0snq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xtlvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xrj5j")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_ky1od")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="Iron" instance=ExtResource("1_mp8af")]
+level = 3
+health = 30
+max_health = 30
+amount = 2
+item_id = 3
+
+[node name="Area2D" parent="." index="0"]
+position = Vector2(1, 62)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_ol8qq")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_rnqxb")
+animation = &"destroyed"

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmo6hejkfnt6j"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/object.gd" id="1_ikcks"]
+
+[node name="Object" type="Node2D" groups=["Object"]]
+script = ExtResource("1_ikcks")
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

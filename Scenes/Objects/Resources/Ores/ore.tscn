@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwafw0b471xb0"]
+
+[ext_resource type="PackedScene" uid="uid://beco5oqe0ef3b" path="res://Scenes/Objects/Resources/resource.tscn" id="1_an15x"]
+[ext_resource type="Script" path="res://Scenes/Objects/Resources/Ores/ore.gd" id="2_p36qi"]
+
+[node name="Ore" instance=ExtResource("1_an15x")]
+script = ExtResource("2_p36qi")
+level = 1
+
+[node name="Area2D" parent="." index="0"]
+z_index = 0
+
+[node name="LifeTimer" parent="." index="2"]
+wait_time = 60.0

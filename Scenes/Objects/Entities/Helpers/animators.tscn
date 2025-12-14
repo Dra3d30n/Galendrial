@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ge78onre18i"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/Entities/Helpers/animators.gd" id="1_lc48c"]
+
+[node name="Animators" type="Node2D"]
+script = ExtResource("1_lc48c")
+
+[node name="body" type="AnimatedSprite2D" parent="."]
+
+[node name="head" type="AnimatedSprite2D" parent="."]
+
+[node name="chest" type="AnimatedSprite2D" parent="."]
+
+[node name="hands" type="AnimatedSprite2D" parent="."]
+
+[node name="legs" type="AnimatedSprite2D" parent="."]
+
+[node name="feet" type="AnimatedSprite2D" parent="."]
+
+[node name="offhand" type="AnimatedSprite2D" parent="."]
+
+[node name="tool" type="AnimatedSprite2D" parent="."]
+
+[node name="backpack" type="AnimatedSprite2D" parent="."]
+
+[node name="mount" type="AnimatedSprite2D" parent="."]

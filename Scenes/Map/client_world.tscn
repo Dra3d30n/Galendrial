@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6winhgrxwssi"]
+
+[ext_resource type="PackedScene" uid="uid://ytkxjwq2b1lg" path="res://Scenes/Map/Map/map.tscn" id="1_xcaxg"]
+[ext_resource type="PackedScene" uid="uid://lm7flcenwth7" path="res://Scenes/UI/UIWindows/ui_window.tscn" id="2_vwtt6"]
+[ext_resource type="PackedScene" uid="uid://cn67bpgnfvlar" path="res://Scenes/UI/UIWindows/Console/console.tscn" id="3_f2etp"]
+[ext_resource type="PackedScene" uid="uid://em6f7dqkr7c" path="res://Scenes/UI/UIWidgets/Actions/action_ui.tscn" id="3_q6ry1"]
+
+[sub_resource type="TileSet" id="TileSet_5yar8"]
+tile_shape = 1
+tile_size = Vector2i(128, 64)
+
+[node name="World" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("1_xcaxg")]
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="0" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="1" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="2" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="3" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="4" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="5" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="6" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="7" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="8" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="9" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="10" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="11" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="12" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="13" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="14" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="15" type="TileMapLayer" parent="Objects"]
+tile_set = SubResource("TileSet_5yar8")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="UIWindow" parent="UI" instance=ExtResource("2_vwtt6")]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 7.0
+offset_bottom = 5.0
+
+[node name="Console" parent="UI" instance=ExtResource("3_f2etp")]
+offset_left = 303.0
+offset_top = 114.0
+offset_right = 303.0
+offset_bottom = 114.0
+
+[node name="WorldRootedUI" type="CanvasLayer" parent="UI"]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="ActionUI" parent="UI/WorldRootedUI" instance=ExtResource("3_q6ry1")]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 7.0
+offset_bottom = 5.0

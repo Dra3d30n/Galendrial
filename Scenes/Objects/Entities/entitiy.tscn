@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs1wp2vfn6tdo"]
+
+[ext_resource type="PackedScene" uid="uid://cmo6hejkfnt6j" path="res://Scenes/Objects/object.tscn" id="1_iepnd"]
+[ext_resource type="PackedScene" uid="uid://c4ge78onre18i" path="res://Scenes/Objects/Entities/Helpers/animators.tscn" id="2_524p8"]
+[ext_resource type="Script" path="res://Scenes/Objects/Entities/entitiy.gd" id="2_elcw4"]
+
+[node name="Entitiy" instance=ExtResource("1_iepnd")]
+script = ExtResource("2_elcw4")
+
+[node name="Animators" parent="." index="1" instance=ExtResource("2_524p8")]
+
+[node name="Timer" type="Timer" parent="." index="2"]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

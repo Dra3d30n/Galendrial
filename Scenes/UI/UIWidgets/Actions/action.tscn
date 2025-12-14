@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2arq67uwsyts"]
+
+[ext_resource type="PackedScene" uid="uid://bet055jldfxdj" path="res://Scenes/UI/ui_root.tscn" id="1_cm6ir"]
+[ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Actions/action.gd" id="2_n1dwn"]
+[ext_resource type="PackedScene" uid="uid://cp8sm2rgraqhm" path="res://Scenes/UI/UIWidgets/Buttons/ScalableButtons/scalable_button.tscn" id="2_s2jw4"]
+[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="3_dwxm2"]
+
+[node name="Action" instance=ExtResource("1_cm6ir")]
+custom_minimum_size = Vector2(71, 15)
+script = ExtResource("2_n1dwn")
+
+[node name="ScalableButton" parent="." index="0" instance=ExtResource("2_s2jw4")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="." index="1"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 57.0
+offset_bottom = 27.0
+text = "Walk To"
+label_settings = ExtResource("3_dwxm2")
+
+[connection signal="pressed" from="ScalableButton" to="." method="_on_scalable_button_pressed"]

@@ -1,0 +1,96 @@
+[gd_scene load_steps=20 format=3 uid="uid://bjcbesolna6ok"]
+
+[ext_resource type="PackedScene" uid="uid://b3xylecf600kx" path="res://Scenes/Objects/Resources/Trees/tree.tscn" id="1_4nvng"]
+[ext_resource type="Texture2D" uid="uid://cn4kqftsmhjad" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Tree C1_N.png" id="2_prw3v"]
+[ext_resource type="Texture2D" uid="uid://lamlp6m6jpwk" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0001.png" id="2_wcb0v"]
+[ext_resource type="Texture2D" uid="uid://bifi75dwdmcg4" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0003.png" id="3_c0hyh"]
+[ext_resource type="Texture2D" uid="uid://3u430hu4beqa" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0005.png" id="4_femw6"]
+[ext_resource type="Texture2D" uid="uid://b83rpbu4avvdk" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0007.png" id="5_xpo1e"]
+[ext_resource type="Texture2D" uid="uid://c284kgw38riqi" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0009.png" id="6_jil47"]
+[ext_resource type="Texture2D" uid="uid://k8v1nc6hxrn" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0011.png" id="7_wy5pv"]
+[ext_resource type="Texture2D" uid="uid://d2khulongto6v" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0013.png" id="8_b5t0g"]
+[ext_resource type="Texture2D" uid="uid://clgcc2jy7g6m" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0015.png" id="9_2gtiu"]
+[ext_resource type="Texture2D" uid="uid://c0bcb63kega7d" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0017.png" id="10_mmdj2"]
+[ext_resource type="Texture2D" uid="uid://cuxs23o72kw55" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0019.png" id="11_s7twb"]
+[ext_resource type="Texture2D" uid="uid://dhuuyrjkym7hf" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0021.png" id="12_vv4t8"]
+[ext_resource type="Texture2D" uid="uid://cayavxuuj13n3" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0023.png" id="13_sbor4"]
+[ext_resource type="Texture2D" uid="uid://dyfrbhv1md8xq" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0025.png" id="14_fc3kd"]
+[ext_resource type="Texture2D" uid="uid://584obuf4pkk8" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0027.png" id="15_dr4vt"]
+[ext_resource type="Texture2D" uid="uid://dtct2rtqn6a3n" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0029.png" id="16_3a1lf"]
+[ext_resource type="Texture2D" uid="uid://bdrcvpgq34xa3" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/Tree Yellow Explosion/0031.png" id="17_5bpjo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16dxj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wcb0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c0hyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_femw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xpo1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jil47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wy5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b5t0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2gtiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mmdj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s7twb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vv4t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sbor4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fc3kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dr4vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3a1lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5bpjo")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_prw3v")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="AutumnOak" instance=ExtResource("1_4nvng")]
+health = 9
+max_health = 9
+amount = 4
+item_id = 4
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_16dxj")
+animation = &"destroyed"
+frame = 15
+frame_progress = 1.0

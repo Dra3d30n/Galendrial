@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp8sm2rgraqhm"]
+
+[ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="1_5qut1"]
+[ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Buttons/ScalableButtons/scalable_button.gd" id="1_pc6gm"]
+
+[node name="ScalableButton" type="Control"]
+layout_mode = 3
+anchor_right = 0.003125
+anchor_bottom = 0.00555556
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_pc6gm")
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5qut1")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="Button" type="Button" parent="NinePatchRect"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="button_up" from="NinePatchRect/Button" to="." method="_on_button_button_up"]

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://drghg32df3ev3"]
+
+[ext_resource type="Shader" path="res://Scenes/Map/world.gdshader" id="1_taby6"]
+
+[resource]
+shader = ExtResource("1_taby6")
+shader_parameter/intensity = 0.02
+shader_parameter/block_size = 1.0

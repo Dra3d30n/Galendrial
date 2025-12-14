@@ -1,0 +1,22 @@
+[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://5jujdxjxe70"]
+
+[ext_resource type="PackedScene" uid="uid://b5qpbsyf17hcf" path="res://Scenes/Objects/Resources/Ores/L1/LargeStone/large_stone.tscn" id="1_8hdr5"]
+[ext_resource type="PackedScene" uid="uid://d05sjxob121p4" path="res://Scenes/Objects/Resources/Ores/L1/SmallStone/small_stone.tscn" id="2_hgrmr"]
+[ext_resource type="PackedScene" uid="uid://chl55r2wuxned" path="res://Scenes/Objects/Resources/Ores/L2/Copper/copper.tscn" id="3_l05ay"]
+[ext_resource type="PackedScene" uid="uid://cxbuo64ec8fvy" path="res://Scenes/Objects/Resources/Ores/L2/Tin/tin.tscn" id="4_jdqf0"]
+[ext_resource type="PackedScene" uid="uid://col1hinbggsvf" path="res://Scenes/Objects/Resources/Ores/L3/Gold/gold.tscn" id="5_q1ggv"]
+[ext_resource type="PackedScene" uid="uid://c5o531tb70eh5" path="res://Scenes/Objects/Resources/Ores/L3/Iron/iron.tscn" id="6_gav23"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_j7hpo"]
+resource_name = "Ores"
+scenes/1/scene = ExtResource("1_8hdr5")
+scenes/2/scene = ExtResource("2_hgrmr")
+scenes/3/scene = ExtResource("3_l05ay")
+scenes/4/scene = ExtResource("4_jdqf0")
+scenes/5/scene = ExtResource("5_q1ggv")
+scenes/6/scene = ExtResource("6_gav23")
+
+[resource]
+tile_shape = 1
+tile_size = Vector2i(128, 64)
+sources/0 = SubResource("TileSetScenesCollectionSource_j7hpo")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1ow1grgesdo0"]
+
+[ext_resource type="PackedScene" uid="uid://cs1wp2vfn6tdo" path="res://Scenes/Objects/Entities/entitiy.tscn" id="1_v0vyp"]
+[ext_resource type="Script" path="res://Scenes/Objects/Entities/Player/player.gd" id="2_mww1d"]
+[ext_resource type="Texture2D" uid="uid://bmgynhif2tlgt" path="res://Assets/Test/Human/Idle.png" id="3_dl024"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ykx7"]
+radius = 8.0
+height = 38.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg5ut"]
+atlas = ExtResource("3_dl024")
+region = Rect2(414, 152, 76, 84)
+
+[node name="Player" instance=ExtResource("1_v0vyp")]
+script = ExtResource("2_mww1d")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CapsuleShape2D_4ykx7")
+
+[node name="Camera2D" type="Camera2D" parent="." index="3"]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
+texture = SubResource("AtlasTexture_eg5ut")

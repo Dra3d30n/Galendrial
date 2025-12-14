@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://pkafl1ssesk6"]
+
+[ext_resource type="PackedScene" uid="uid://cs1wp2vfn6tdo" path="res://Scenes/Objects/Entities/entitiy.tscn" id="1_3n4qu"]
+[ext_resource type="Script" path="res://Scenes/Objects/Entities/Enemies/enemy.gd" id="2_vaf83"]
+
+[node name="Enemy" instance=ExtResource("1_3n4qu")]
+script = ExtResource("2_vaf83")
+
+[node name="Area2D" parent="." index="0"]
+z_index = 0

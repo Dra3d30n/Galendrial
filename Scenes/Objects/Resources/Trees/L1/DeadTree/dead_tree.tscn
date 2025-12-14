@@ -1,0 +1,94 @@
+[gd_scene load_steps=20 format=3 uid="uid://c3gcdirifbbhx"]
+
+[ext_resource type="PackedScene" uid="uid://b3xylecf600kx" path="res://Scenes/Objects/Resources/Trees/tree.tscn" id="1_datng"]
+[ext_resource type="Texture2D" uid="uid://bj75ohsenwv74" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0001.png" id="2_qu4mm"]
+[ext_resource type="Texture2D" uid="uid://d2qr2f3opxj1b" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0003.png" id="3_c5sb7"]
+[ext_resource type="Texture2D" uid="uid://bfscdn5ilmajl" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0005.png" id="4_t5img"]
+[ext_resource type="Texture2D" uid="uid://cqdufbegbqtya" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0007.png" id="5_6xvqb"]
+[ext_resource type="Texture2D" uid="uid://c6am4nhec8ap6" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0009.png" id="6_wqs8d"]
+[ext_resource type="Texture2D" uid="uid://dpiflv7k8mjwj" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0011.png" id="7_dm4j2"]
+[ext_resource type="Texture2D" uid="uid://cp8yj1f0xims1" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0013.png" id="8_ppbww"]
+[ext_resource type="Texture2D" uid="uid://cmvfckvh3dod0" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0015.png" id="9_anmtf"]
+[ext_resource type="Texture2D" uid="uid://dck47y0bi7ieo" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0017.png" id="10_xmrn4"]
+[ext_resource type="Texture2D" uid="uid://b8agiv2f3n7gg" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0019.png" id="11_bbnuk"]
+[ext_resource type="Texture2D" uid="uid://br2jtx1vs2q3x" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0021.png" id="12_gsl6o"]
+[ext_resource type="Texture2D" uid="uid://tjsta6adgelg" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0023.png" id="13_x6exj"]
+[ext_resource type="Texture2D" uid="uid://byk63v38kv5yu" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0025.png" id="14_0nte0"]
+[ext_resource type="Texture2D" uid="uid://b55s1aswquki5" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0027.png" id="15_fnked"]
+[ext_resource type="Texture2D" uid="uid://cenrg8f07hkhy" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0029.png" id="16_im4dc"]
+[ext_resource type="Texture2D" uid="uid://bd35g1epx4a3b" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/wood explosion large/0031.png" id="17_7mlng"]
+[ext_resource type="Texture2D" uid="uid://dr6ugahokxda2" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Tree E1_N.png" id="18_44wk4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ed5e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qu4mm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c5sb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t5img")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6xvqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wqs8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dm4j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ppbww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_anmtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xmrn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bbnuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gsl6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x6exj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0nte0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fnked")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_im4dc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7mlng")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_44wk4")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="DeadTree" instance=ExtResource("1_datng")]
+amount = 4
+item_id = 4
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_8ed5e")
+animation = &"destroyed"
+frame = 15
+frame_progress = 1.0
