@@ -1,6 +1,6 @@
 extends "res://Scenes/Objects/Interactables/interactable.gd"
 var inventory=[]
-var max_size=0
+@export var max_size=0
 
 
 func awake():
@@ -38,3 +38,13 @@ func remove_item(id, amount):
 	return false  # item not found
 func get_current_amount():
 	return len(inventory)
+func change(slot):
+	request_change.rpc_id(1,slot,multiplayer.get_unique_id())
+@rpc("any_peer","reliable")
+func request_change(slot,sender):
+	var data=inventory[slot]
+	if data!=null:
+		finish_change.rpc_id(sender,data)
+@rpc("reliable","authority")
+func finish_change(item):
+	GameState.active_player.add_item(item)

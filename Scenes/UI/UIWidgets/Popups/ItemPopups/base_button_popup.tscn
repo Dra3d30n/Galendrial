@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctw8yilk36brr"]
+
+[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="1_bl1pm"]
+[ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_eurhm"]
+
+[node name="BaseButtonPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 25.0
+label_settings = ExtResource("1_bl1pm")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Label"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eurhm")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2

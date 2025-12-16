@@ -9,6 +9,7 @@ var resizeY : bool
 var initialSize : Vector2
 @export var GrabThreshold := 20
 @export var ResizeThreshold := 5
+@export var can_be_resized := true
 
 func _input(event):
 	if Input.is_action_just_pressed("LeftMouse"):
@@ -21,38 +22,41 @@ func _input(event):
 			initialPosition = global_position
 			isMoving = true
 		else:
-			if abs(localMousePos.x - rect.size.x) < ResizeThreshold:
-				start.x = event.position.x
-				initialSize.x = get_size().x
-				resizeX = true
-				isResizing = true
-			
-			if abs(localMousePos.y - rect.size.y) < ResizeThreshold:
-				start.y = event.position.y
-				initialSize.y = get_size().y
-				resizeY = true
-				isResizing = true
-			
-			if localMousePos.x < ResizeThreshold &&  localMousePos.x > -ResizeThreshold:
-				start.x = event.position.x
-				initialPosition.x = get_global_position().x
-				initialSize.x = get_size().x
-				isResizing = true
-				resizeX = true
+			if can_be_resized:
+				if abs(localMousePos.x - rect.size.x) < ResizeThreshold:
+					start.x = event.position.x
+					initialSize.x = get_size().x
+					resizeX = true
+					isResizing = true
 				
-			if localMousePos.y < ResizeThreshold &&  localMousePos.y > -ResizeThreshold:
-				start.y = event.position.y
-				initialPosition.y = get_global_position().y
-				initialSize.y = get_size().y
-				isResizing = true
-				resizeY = true
+				if abs(localMousePos.y - rect.size.y) < ResizeThreshold:
+					start.y = event.position.y
+					initialSize.y = get_size().y
+					resizeY = true
+					isResizing = true
+				
+				if localMousePos.x < ResizeThreshold && localMousePos.x > -ResizeThreshold:
+					start.x = event.position.x
+					initialPosition.x = get_global_position().x
+					initialSize.x = get_size().x
+					isResizing = true
+					resizeX = true
+					
+				if localMousePos.y < ResizeThreshold && localMousePos.y > -ResizeThreshold:
+					start.y = event.position.y
+					initialPosition.y = get_global_position().y
+					initialSize.y = get_size().y
+					isResizing = true
+					resizeY = true
+
 		
 	if Input.is_action_pressed("LeftMouse"):
 		if isMoving:
 			set_position(initialPosition + (event.position - start))
 			clamp_to_screen()
 		
-		if isResizing:
+		if isResizing and can_be_resized:
+			# resize logic
 			var newWidith = get_size().x
 			var newHeight = get_size().y
 			
