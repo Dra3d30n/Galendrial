@@ -88,6 +88,7 @@ animations = [{
 
 [node name="SmallStone" instance=ExtResource("1_jv6y6")]
 amount = 2
+Name = "Small Stone"
 
 [node name="Area2D" parent="." index="0"]
 z_index = 1

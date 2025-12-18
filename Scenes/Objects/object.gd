@@ -2,7 +2,8 @@ extends Node2D
 
 # -----------------------------
 # Exports / variables
-# -----------------------------
+# -----------------------------\
+@export var Name="Object"
 @export var NetworkID: int = 1
 @export var ObjectID: int = 1
 @export var z: int = 0

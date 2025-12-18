@@ -87,6 +87,7 @@ animations = [{
 health = 24
 max_health = 24
 item_id = 5
+Name = "Large Pine"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_aevyg")

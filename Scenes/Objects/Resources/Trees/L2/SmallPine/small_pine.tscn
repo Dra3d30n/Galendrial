@@ -88,6 +88,7 @@ health = 14
 max_health = 14
 amount = 4
 item_id = 5
+Name = "Small Pine"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_w4tmx")

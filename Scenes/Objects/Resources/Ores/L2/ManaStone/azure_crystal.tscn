@@ -89,6 +89,7 @@ health = 16
 max_health = 16
 amount = 2
 item_id = 1
+Name = "Azure Crystal"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_idibg")

@@ -84,6 +84,9 @@ animations = [{
 }]
 
 [node name="LargeGrass" instance=ExtResource("1_h3jds")]
+health = 1
+max_health = 1
+Name = "Large Stone"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_xnt8e")

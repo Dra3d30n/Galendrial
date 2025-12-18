@@ -89,6 +89,7 @@ health = 26
 max_health = 26
 amount = 2
 item_id = 7
+Name = "Violet Crystal"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_llj7p")

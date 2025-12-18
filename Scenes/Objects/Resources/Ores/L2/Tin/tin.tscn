@@ -92,6 +92,7 @@ health = 22
 max_health = 22
 amount = 2
 item_id = 2
+Name = "Tin"
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(2, 62)

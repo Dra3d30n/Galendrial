@@ -26,6 +26,7 @@ animations = [{
 [node name="Chest" instance=ExtResource("1_3ksua")]
 max_size = 8
 ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Storage/Chests/Chest/chest_storage.tscn"
+Name = "Chest"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_5cog0")

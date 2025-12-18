@@ -90,6 +90,7 @@ animations = [{
 level = 3
 health = 32
 max_health = 32
+Name = "Gold"
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(2, 61)

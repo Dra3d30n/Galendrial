@@ -89,6 +89,7 @@ health = 42
 max_health = 42
 amount = 3
 item_id = 9
+Name = "Adamantite"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_cfg2j")

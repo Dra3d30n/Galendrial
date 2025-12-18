@@ -92,6 +92,7 @@ health = 28
 max_health = 28
 amount = 2
 item_id = 3
+Name = "Iron"
 
 [node name="Area2D" parent="." index="0"]
 position = Vector2(1, 62)

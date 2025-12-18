@@ -5,7 +5,8 @@
 
 [node name="Flora" instance=ExtResource("1_6tkga")]
 script = ExtResource("2_7qs0q")
-level = 1
+health = 1
+max_health = 1
 
 [node name="LifeTimer" parent="." index="2"]
 wait_time = 120.0

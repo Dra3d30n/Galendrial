@@ -88,6 +88,7 @@ health = 18
 max_health = 18
 amount = 8
 item_id = 4
+Name = "Large Oak"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_m0rri")

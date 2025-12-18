@@ -4,10 +4,6 @@
 [ext_resource type="Script" path="res://Scenes/UI/UIWindows/Interactables/Storage/base_storage.gd" id="2_r0m30"]
 
 [node name="BaseStorage" instance=ExtResource("1_3v0k4")]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
 script = ExtResource("2_r0m30")
 
 [node name="WindowManager" parent="." index="0"]

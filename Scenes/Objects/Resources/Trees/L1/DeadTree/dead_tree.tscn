@@ -86,6 +86,7 @@ animations = [{
 [node name="DeadTree" instance=ExtResource("1_datng")]
 amount = 4
 item_id = 4
+Name = "Dead Tree"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_8ed5e")

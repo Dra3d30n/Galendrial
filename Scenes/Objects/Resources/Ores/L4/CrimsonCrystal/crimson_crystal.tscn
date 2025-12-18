@@ -89,6 +89,7 @@ health = 36
 max_health = 36
 amount = 2
 item_id = 8
+Name = "Crimson Crystal"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_gyixl")

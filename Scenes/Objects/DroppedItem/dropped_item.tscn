@@ -5,10 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://dclei30p74j50" path="res://Assets/Map/FantasyTilesetGameReady/Other/ItemRay.png" id="2_t5e10"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jjg74"]
-radius = 46.0109
+radius = 64.6297
 
 [node name="DroppedItem" instance=ExtResource("1_aaicb")]
 script = ExtResource("2_fya24")
+item_id = 0
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 shape = SubResource("CircleShape2D_jjg74")
