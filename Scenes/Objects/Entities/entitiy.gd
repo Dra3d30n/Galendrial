@@ -3,7 +3,8 @@ extends "res://Scenes/Objects/object.gd"
 var goals: Array = []
 @onready var animator: Node2D = $Animators
 var item_range=32
-var items=[]
+var max_items=32
+var inventory=[]
 var equipped := {
 	"body": null,
 	"head": null,
@@ -56,6 +57,7 @@ var goal_handlers := {
 	"harvest": "handle_harvest",
 	"hitstun": "handle_hitstun",
 	"attack": "handle_attack",
+	"add_item":"handle_add_item"
 }
 
 func match_goals() -> Vector2:
@@ -106,7 +108,9 @@ func animate(velocity: Vector2):
 		animator.play("south", animations["walk"])
 	else:
 		animator.play(Util.v2_to_cardinal(velocity), animations["walk"])
-
+func handle_add_item(vars):
+	if vars[0]:
+		add_item(vars[1])
 # Update children
 func handle_children(delta: float) -> void:
 	animator.update(delta)
@@ -114,3 +118,17 @@ func handle_children(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	pathfind()
+func add_item(id):
+	if inventory.size() >= max_items:
+		return false  # inventory full
+
+	inventory.append({"id": id})
+	return true
+
+func remove_item(id):
+	for index in range(inventory.size()):
+		if inventory[index]["id"] == id:
+			inventory.remove(index)
+			return true  # successfully removed
+
+	return false  # item not found

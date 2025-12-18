@@ -29,5 +29,25 @@ var items={
 		"name":"Pine Wood",
 		"type":"resource",
 		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
-	}
+	},
+	6:{
+		"name":"Azure Shard",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
+	7:{
+		"name":"Violet Shard",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
+	8:{
+		"name":"Crimson Shard",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
+	9:{
+		"name":"Adamantite",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
 }

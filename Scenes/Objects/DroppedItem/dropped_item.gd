@@ -4,4 +4,4 @@ func awake():
 	Actions=["pick up"]
 	
 func pick_up():
-	GameState.active_player.goals=
+	GameState.active_player.goals=[["walk",[global_position]],["add_item",[self,item_id,]]]

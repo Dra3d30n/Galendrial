@@ -1,14 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://hblqfmd2vj4e"]
+[gd_scene load_steps=3 format=3 uid="uid://hblqfmd2vj4e"]
 
 [ext_resource type="PackedScene" uid="uid://cjnl430j4cw41" path="res://Scenes/UI/UIWindows/Interactables/Storage/base_storage.tscn" id="1_24tuc"]
 [ext_resource type="PackedScene" uid="uid://b1sh2gr07y2kk" path="res://Scenes/UI/UIWidgets/Items/Storage Item/storage_item.tscn" id="2_umesc"]
-[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="3_fhgs6"]
 
 [node name="ChestStorage" instance=ExtResource("1_24tuc")]
 
 [node name="WindowManager" parent="." index="0"]
-offset_right = 169.0
-offset_bottom = 109.0
+offset_right = 167.0
+offset_bottom = 112.0
 
 [node name="NinePatchRect" parent="WindowManager" index="0"]
 offset_right = 1.0
@@ -16,9 +15,9 @@ offset_bottom = -2.0
 
 [node name="GridContainer" parent="." index="1"]
 offset_left = 6.0
-offset_top = 27.0
+offset_top = 30.0
 offset_right = 126.0
-offset_bottom = 67.0
+offset_bottom = 70.0
 columns = 4
 
 [node name="StorageItem" parent="GridContainer" index="0" instance=ExtResource("2_umesc")]
@@ -45,11 +44,7 @@ layout_mode = 2
 [node name="StorageItem8" parent="GridContainer" index="7" instance=ExtResource("2_umesc")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="." index="2"]
-layout_mode = 0
-offset_left = 4.0
-offset_right = 39.0
-offset_bottom = 16.0
-scale = Vector2(2, 2)
-text = "Chest"
-label_settings = ExtResource("3_fhgs6")
+[node name="Title" parent="." index="2"]
+offset_left = 3.0
+offset_right = 43.0
+offset_bottom = 26.0

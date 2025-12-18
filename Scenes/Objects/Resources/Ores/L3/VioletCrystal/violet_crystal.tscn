@@ -1,0 +1,97 @@
+[gd_scene load_steps=20 format=3 uid="uid://ogw3ntvm3v0q"]
+
+[ext_resource type="PackedScene" uid="uid://bwafw0b471xb0" path="res://Scenes/Objects/Resources/Ores/ore.tscn" id="1_5jii6"]
+[ext_resource type="Texture2D" uid="uid://bhjqu1ec3jfl7" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0001.png" id="2_76iu1"]
+[ext_resource type="Texture2D" uid="uid://c64vfngqf27tx" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0003.png" id="3_b6guk"]
+[ext_resource type="Texture2D" uid="uid://dexslrx4kf3s1" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0005.png" id="4_asysb"]
+[ext_resource type="Texture2D" uid="uid://dy0m2gy4smtj6" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0007.png" id="5_talge"]
+[ext_resource type="Texture2D" uid="uid://cpqvbij4b6rp2" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0009.png" id="6_2b0q7"]
+[ext_resource type="Texture2D" uid="uid://dla8mqkdinv2o" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0011.png" id="7_my3me"]
+[ext_resource type="Texture2D" uid="uid://dhl2bonoqbajc" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0013.png" id="8_xxxf3"]
+[ext_resource type="Texture2D" uid="uid://115bl6jyj7ne" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0015.png" id="9_nr2su"]
+[ext_resource type="Texture2D" uid="uid://d1vddh84bpwnl" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0017.png" id="10_hn48n"]
+[ext_resource type="Texture2D" uid="uid://bbxgb5160gf33" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0019.png" id="11_25psl"]
+[ext_resource type="Texture2D" uid="uid://b1xumbeaf8dqn" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0021.png" id="12_db77r"]
+[ext_resource type="Texture2D" uid="uid://b7hkcmyvv627n" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0023.png" id="13_xg3jd"]
+[ext_resource type="Texture2D" uid="uid://bajqxsba6m2pr" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0025.png" id="14_yh48x"]
+[ext_resource type="Texture2D" uid="uid://bo0pr0wqn4klq" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0027.png" id="15_c0usi"]
+[ext_resource type="Texture2D" uid="uid://badi4qes2daqf" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0029.png" id="16_ijy48"]
+[ext_resource type="Texture2D" uid="uid://dnwcqj8rcr2so" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0031.png" id="17_17bts"]
+[ext_resource type="Texture2D" uid="uid://p0ngr0ko4xd1" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Stone A22_E.png" id="18_2cpwf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_llj7p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_76iu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b6guk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_asysb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_talge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2b0q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_my3me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xxxf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nr2su")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hn48n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_25psl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_db77r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xg3jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yh48x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c0usi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ijy48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_17bts")
+}],
+"loop": false,
+"name": &"destroyed",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_2cpwf")
+}],
+"loop": true,
+"name": &"formed",
+"speed": 5.0
+}]
+
+[node name="VioletCrystal" instance=ExtResource("1_5jii6")]
+level = 3
+health = 26
+max_health = 26
+amount = 2
+item_id = 7
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_llj7p")
+animation = &"destroyed"
+frame = 15
+frame_progress = 1.0

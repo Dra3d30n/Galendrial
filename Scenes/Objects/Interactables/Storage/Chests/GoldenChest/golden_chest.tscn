@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://duc3aib3hpfbu"]
+
+[ext_resource type="PackedScene" uid="uid://dwxprqq8est6j" path="res://Scenes/Objects/Interactables/Storage/storage.tscn" id="1_exc0n"]
+[ext_resource type="Texture2D" uid="uid://c6qgge4m34wj5" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Chest B1_E.png" id="2_5bpso"]
+[ext_resource type="Texture2D" uid="uid://u1j4t6vy4pwr" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Chest B2_E.png" id="3_m2trl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i3fy2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5bpso")
+}],
+"loop": true,
+"name": &"ignored",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_m2trl")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]
+
+[node name="GoldenChest" instance=ExtResource("1_exc0n")]
+max_size = 12
+ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Storage/Chests/GoldenChest/golden_chest_ui.tscn"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_i3fy2")

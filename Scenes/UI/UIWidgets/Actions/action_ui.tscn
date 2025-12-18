@@ -1,16 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://em6f7dqkr7c"]
+[gd_scene load_steps=6 format=3 uid="uid://em6f7dqkr7c"]
 
 [ext_resource type="PackedScene" uid="uid://bet055jldfxdj" path="res://Scenes/UI/ui_root.tscn" id="1_p344v"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Actions/action_ui.gd" id="2_gmy8m"]
 [ext_resource type="PackedScene" uid="uid://b2arq67uwsyts" path="res://Scenes/UI/UIWidgets/Actions/action.tscn" id="2_xkmp8"]
+[ext_resource type="Texture2D" uid="uid://dlgnkcfmbyw3l" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Focus.png" id="3_tv2ag"]
+[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="4_m2w6s"]
 
 [node name="ActionUI" instance=ExtResource("1_p344v")]
 script = ExtResource("2_gmy8m")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." index="0"]
+[node name="NinePatchRect" type="NinePatchRect" parent="." index="0"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 71.0
+offset_bottom = 19.0
+texture = ExtResource("3_tv2ag")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="NinePatchRect" index="0"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 43.0
+offset_bottom = 24.0
+text = "Player"
+label_settings = ExtResource("4_m2w6s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." index="1"]
+layout_mode = 0
+offset_top = 19.0
+offset_right = 71.0
+offset_bottom = 124.0
 theme_override_constants/separation = 0
 
 [node name="Action" parent="VBoxContainer" index="0" instance=ExtResource("2_xkmp8")]

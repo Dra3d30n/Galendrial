@@ -88,8 +88,8 @@ animations = [{
 
 [node name="Iron" instance=ExtResource("1_mp8af")]
 level = 3
-health = 30
-max_health = 30
+health = 28
+max_health = 28
 amount = 2
 item_id = 3
 

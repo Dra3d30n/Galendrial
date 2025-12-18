@@ -1,6 +1,6 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c02m0rv13xnjn"]
 
-[ext_resource type="FontFile" uid="uid://cj3a27bug764v" path="res://Assets/Fonts/RuneScape_UF/runescape_uf.ttf" id="1_k0jjw"]
+[ext_resource type="FontFile" uid="uid://b37somxbekyrc" path="res://Assets/Fonts/RuneScape_UF/runescape_uf.ttf" id="1_k0jjw"]
 
 [resource]
 line_spacing = -5.0

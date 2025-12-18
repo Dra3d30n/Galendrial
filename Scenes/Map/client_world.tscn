@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6winhgrxwssi"]
+[gd_scene load_steps=7 format=3 uid="uid://c6winhgrxwssi"]
 
 [ext_resource type="PackedScene" uid="uid://ytkxjwq2b1lg" path="res://Scenes/Map/Map/map.tscn" id="1_xcaxg"]
+[ext_resource type="Script" path="res://Scenes/Map/Map/map.gd" id="2_tpfpo"]
 [ext_resource type="PackedScene" uid="uid://lm7flcenwth7" path="res://Scenes/UI/UIWindows/ui_window.tscn" id="2_vwtt6"]
 [ext_resource type="PackedScene" uid="uid://cn67bpgnfvlar" path="res://Scenes/UI/UIWindows/Console/console.tscn" id="3_f2etp"]
 [ext_resource type="PackedScene" uid="uid://em6f7dqkr7c" path="res://Scenes/UI/UIWidgets/Actions/action_ui.tscn" id="3_q6ry1"]
@@ -12,6 +13,7 @@ tile_size = Vector2i(128, 64)
 [node name="World" type="Node2D"]
 
 [node name="Map" parent="." instance=ExtResource("1_xcaxg")]
+script = ExtResource("2_tpfpo")
 
 [node name="Objects" type="Node2D" parent="."]
 
