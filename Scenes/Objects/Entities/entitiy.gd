@@ -110,7 +110,8 @@ func animate(velocity: Vector2):
 		animator.play(Util.v2_to_cardinal(velocity), animations["walk"])
 func handle_add_item(vars):
 	if vars[0]:
-		add_item(vars[1])
+		#NEEDLATER
+		add_item(vars[1],vars[2])
 # Update children
 func handle_children(delta: float) -> void:
 	animator.update(delta)
@@ -118,17 +119,30 @@ func handle_children(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	pathfind()
-func add_item(id):
-	if inventory.size() >= max_items:
-		return false  # inventory full
+# Add an item with a specific amount
+func add_item(id, amount = 1) -> bool:
+	# Try to stack if item already exists
+	for entry in inventory:
+		if entry["id"] == id:
+			entry["amount"] += amount
+			return true
 
-	inventory.append({"id": id})
+	# If inventory is full, cannot add new item
+	if inventory.size() >= max_items:
+		return false
+
+	# Otherwise, add new entry
+	inventory.append({"id": id, "amount": amount})
 	return true
 
-func remove_item(id):
+
+# Remove a specific amount of an item
+func remove_item(id, amount = 1) -> bool:
 	for index in range(inventory.size()):
 		if inventory[index]["id"] == id:
-			inventory.remove(index)
+			if inventory[index]["amount"] > amount:
+				inventory[index]["amount"] -= amount
+			else:
+				inventory.remove(index)  # remove entire entry if amount <= 0
 			return true  # successfully removed
-
 	return false  # item not found

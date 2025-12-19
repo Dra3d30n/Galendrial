@@ -5,6 +5,7 @@
 
 [node name="Crafter" instance=ExtResource("1_t43v2")]
 script = ExtResource("2_ylja0")
+Name = "Crafting Station"
 
 [node name="Area2D" parent="." index="0"]
 z_index = 0

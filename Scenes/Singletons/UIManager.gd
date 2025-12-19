@@ -27,7 +27,10 @@ func open_ui(scene_path: String) -> Node:
 	open_windows.append(instance)
 	return instance
 
-
+func crafting_failed(reason):
+	info("Crafting Failed: "+reason)
+func crafting_success(item_name):
+	info("Crafting Succesful: "+item_name)
 func close_ui(node_path: String) -> void:
 	if not UIBase.has_node(node_path):
 		print("Warning: node not found: ", node_path)

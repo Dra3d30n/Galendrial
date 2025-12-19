@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0dqypcrno1xy"]
+
+[ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Items/CraftingItem/Craftable/craftable_item.gd" id="1_m2asx"]
+
+[node name="CraftableItem"]
+script = ExtResource("1_m2asx")
+
+[connection signal="pressed" from="NinePatchRect/background" to="." method="_on_background_pressed"]

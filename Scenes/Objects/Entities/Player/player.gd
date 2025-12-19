@@ -1,5 +1,4 @@
 extends "res://Scenes/Objects/Entities/entitiy.gd"
-var Name=""
 var Password=""
 func awake():
 	if multiplayer_authority:

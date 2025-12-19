@@ -31,9 +31,15 @@ func harvest(item: int):
 
 	if health <= 0:
 		GameState.active_player.add_item(item_id, amount)
-		if multiplayer.is_server():
-			rpc_destroy.rpc()
+		request_destroy()
 
+func request_destroy():
+	client_destroy.rpc()
+@rpc("reliable")
+func client_destroy():
+	if multiplayer.is_server():
+		rpc_destroy.rpc()
+		rpc_destroy()
 
 func destroy():
 	state = false
