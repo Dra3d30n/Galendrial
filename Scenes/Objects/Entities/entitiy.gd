@@ -146,3 +146,9 @@ func remove_item(id, amount = 1) -> bool:
 				inventory.remove(index)  # remove entire entry if amount <= 0
 			return true  # successfully removed
 	return false  # item not found
+func get_amount(item_id):
+	var total=0
+	for item in inventory:
+		if item["id"]==item_id:
+			total+=item["amount"]
+	return total

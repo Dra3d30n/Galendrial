@@ -1,5 +1,12 @@
 extends "res://Scenes/Objects/Entities/entitiy.gd"
 var Password=""
+var levels={
+	"Smithing":1,
+	"Mining":1,
+	"Alchemy":1,
+	"Chopping":1,
+	
+}
 func awake():
 	if multiplayer_authority:
 		$Camera2D.make_current()

@@ -1,15 +1,16 @@
 extends Node
 
 var recipes = {
-	0: {
-		"name": "sword",
+	10: {
+		"name": "Bronze Bar",
 		"ingredients": {
-			"iron": 2,
-			"wood": 1
+			1: 1,
+			2: 1
 		},
-		"output_amount": 1,
-		"station": "anvil",
-		"craft_time": 0
+		"output_id": 10,
+		"station": "Anvil",
+		"level_name": "Smithing",
+		"level_requirement":1
 	},
 }
 
@@ -27,8 +28,8 @@ func can_craft(item_name: String, inventory: Array) -> bool:
 	for key in recipes.keys():
 		var recipe = recipes[key]
 		if recipe["name"] == item_name:
-			#if recipe.has("station") and recipe["station"] != current_station:
-				#return false
+			if GameState.active_player.levels[recipe["level_name"]]<recipe["level_requirement"]:
+				return false
 			for ingredient_id in recipe["ingredients"].keys():
 				if GameState.active_player.get_amount(ingredient_id) < recipe["ingredients"][ingredient_id]:
 					return false
@@ -50,7 +51,7 @@ func craft(item_name: String) -> void:
 			for ingredient_id in recipe["ingredients"].keys():
 				GameState.active_player.remove_item(ingredient_id, recipe["ingredients"][ingredient_id])
 			# Add result via player method
-			GameState.active_player.add_item(item_name, recipe.get("output_amount", 1))
+			GameState.active_player.add_item(item_name, recipe["output_id"])
 			emit_signal("crafting_success", item_name)
 			return
 # ----------------------------
