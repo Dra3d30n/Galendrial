@@ -8,4 +8,3 @@ func set_active_object(node):
 		for object in ObjectFactory.get_all_objects():
 			object.active_object_changed(node)
 		active_object=node
-		

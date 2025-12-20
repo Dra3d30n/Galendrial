@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c616c4mqeytmg"]
+[gd_scene load_steps=3 format=3 uid="uid://c616c4mqeytmg"]
 
 [ext_resource type="Script" path="res://Scenes/UI/UIWindows/Interactables/Crafting/craftable.gd" id="1_kdpcd"]
+[ext_resource type="PackedScene" uid="uid://rth0kgt4c777" path="res://Scenes/UI/UIWidgets/Items/CraftingItem/Craftable/craftable_item.tscn" id="2_p5gm7"]
 
 [node name="Craftable" type="Control"]
 layout_mode = 3
@@ -15,3 +16,258 @@ script = ExtResource("1_kdpcd")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_constants/h_separation = 39
+theme_override_constants/v_separation = 39
+columns = 10
+
+[node name="CraftableItem" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem2" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem3" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem4" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem5" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem6" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem7" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem8" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem9" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem10" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem11" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem12" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem13" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem14" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem15" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem16" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem17" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem18" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem19" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem20" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem21" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem22" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem23" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem24" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem25" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem26" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem27" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem28" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem29" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem30" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem31" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem32" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem33" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem34" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem35" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem36" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem37" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem38" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem39" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem40" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem41" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem42" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem43" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem44" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem45" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem46" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem47" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem48" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem49" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem50" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem51" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem52" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem53" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem54" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem55" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem56" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem57" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem58" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem59" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem60" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem61" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem62" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem63" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem64" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem65" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem66" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem67" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem68" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem69" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem70" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem71" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem72" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem73" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem74" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem75" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem76" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem77" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem78" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem79" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem80" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem81" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem82" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem83" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2
+
+[node name="CraftableItem84" parent="GridContainer" instance=ExtResource("2_p5gm7")]
+layout_mode = 2

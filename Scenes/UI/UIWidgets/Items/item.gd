@@ -34,8 +34,3 @@ func _on_hover_timer_timeout() -> void:
 	if hovered:
 		active_ui=UiManager.open_ui(ui)
 		active_ui.global_position=get_global_mouse_position()
-
-
-func _on_background_pressed() -> void:
-	if item_name:
-		GameState.active_object.change(item_name)

@@ -5,13 +5,13 @@
 
 [node name="ScalableButton" type="Control"]
 layout_mode = 3
-anchor_right = 0.003125
-anchor_bottom = 0.00555556
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_pc6gm")
-metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
