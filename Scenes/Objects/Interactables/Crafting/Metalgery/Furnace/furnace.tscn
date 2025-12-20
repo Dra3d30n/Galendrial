@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://u821i0geuup1"]
+
+[ext_resource type="PackedScene" uid="uid://bxgxqq75umsnw" path="res://Scenes/Objects/Interactables/Crafting/crafter.tscn" id="1_p3wb4"]
+[ext_resource type="Texture2D" uid="uid://ctm12jf1nnfil" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Misc C1_E.png" id="2_r3ywl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gogng"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r3ywl")
+}],
+"loop": true,
+"name": &"ignored",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r3ywl")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]
+
+[node name="Furnace" instance=ExtResource("1_p3wb4")]
+ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Crafting/crafting_base.tscn"
+Name = "Furnace"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_gogng")
+animation = &"ignored"

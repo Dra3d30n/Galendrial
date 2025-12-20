@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1qpgv17gxj7u"]
+
+[ext_resource type="PackedScene" uid="uid://bxgxqq75umsnw" path="res://Scenes/Objects/Interactables/Crafting/crafter.tscn" id="1_v3c13"]
+[ext_resource type="Texture2D" uid="uid://dmt730vvmdlwy" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Misc B60_W.png" id="2_s1bfx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymb74"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s1bfx")
+}],
+"loop": true,
+"name": &"ignored",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s1bfx")
+}],
+"loop": true,
+"name": &"interacted",
+"speed": 5.0
+}]
+
+[node name="Spindle" instance=ExtResource("1_v3c13")]
+ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Crafting/crafting_base.tscn"
+Name = "Spindle"
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_ymb74")

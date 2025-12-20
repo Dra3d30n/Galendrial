@@ -50,4 +50,19 @@ var items={
 		"type":"resource",
 		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
 	},
+	10:{
+		"name":"Bronze Bar",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
+	11:{
+		"name":"Leaf",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
+	12:{
+		"name":"Thyme",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+	},
 }

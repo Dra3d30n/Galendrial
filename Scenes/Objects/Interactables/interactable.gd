@@ -2,7 +2,7 @@ extends "res://Scenes/Objects/object.gd"
 
 @export var ui_scene_path: String = ""
 @export var distance_threshold: float = 384
-@export var state: bool = true  # true = interacted, false = ignored
+@export var state: bool = false  # true = interacted, false = ignored
 
 var current_ui: Node = null
 
