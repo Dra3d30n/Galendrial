@@ -1,13 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmo6hejkfnt6j"]
+[gd_scene load_steps=3 format=3 uid="uid://cmo6hejkfnt6j"]
 
 [ext_resource type="Script" path="res://Scenes/Objects/object.gd" id="1_ikcks"]
+[ext_resource type="Script" path="res://Scenes/Objects/area_2d.gd" id="2_bpuhm"]
 
 [node name="Object" type="Node2D" groups=["Object"]]
+y_sort_enabled = true
 script = ExtResource("1_ikcks")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 z_index = 1
+script = ExtResource("2_bpuhm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+polygon = PackedVector2Array(0, 48, -64, 80, 0, 112, 64, 80)
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

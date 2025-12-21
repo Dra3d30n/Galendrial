@@ -90,6 +90,3 @@ Name = "Small Oak"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_ble15")
-animation = &"destroyed"
-frame = 15
-frame_progress = 1.0

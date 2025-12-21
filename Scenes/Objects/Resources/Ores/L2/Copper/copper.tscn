@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://chl55r2wuxned"]
+[gd_scene load_steps=20 format=3 uid="uid://chl55r2wuxned"]
 
 [ext_resource type="PackedScene" uid="uid://bwafw0b471xb0" path="res://Scenes/Objects/Resources/Ores/ore.tscn" id="1_qdpfk"]
 [ext_resource type="Texture2D" uid="uid://dkdiexykghyu0" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0001.png" id="2_pynre"]
@@ -18,9 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://dajqo3yv87g7k" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0029.png" id="16_nayu6"]
 [ext_resource type="Texture2D" uid="uid://c1uvgm4iwiwe4" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0031.png" id="17_6xbwf"]
 [ext_resource type="Texture2D" uid="uid://cc8bs0lfq2xif" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Stone A17_N.png" id="18_ojs77"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_tq5nw"]
-radius = 31.5753
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1tow8"]
 animations = [{
@@ -87,6 +84,7 @@ animations = [{
 }]
 
 [node name="Copper" instance=ExtResource("1_qdpfk")]
+y_sort_enabled = false
 level = 2
 health = 20
 max_health = 20
@@ -94,13 +92,15 @@ amount = 2
 item_id = 1
 Name = "Copper"
 
-[node name="Area2D" parent="." index="0"]
-position = Vector2(-7, 73)
-
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(9, -12)
-shape = SubResource("CircleShape2D_tq5nw")
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = true
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_1tow8")
-animation = &"destroyed"
+script = null
+
+[node name="LifeTimer" parent="." index="2"]
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

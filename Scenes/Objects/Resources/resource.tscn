@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://beco5oqe0ef3b"]
+[gd_scene load_steps=5 format=3 uid="uid://beco5oqe0ef3b"]
 
 [ext_resource type="PackedScene" uid="uid://cmo6hejkfnt6j" path="res://Scenes/Objects/object.tscn" id="1_lgw7g"]
 [ext_resource type="Script" path="res://Scenes/Objects/Resources/resource.gd" id="2_822m1"]
+[ext_resource type="Script" path="res://Scenes/Objects/Resources/animated_sprite_2d.gd" id="3_fx3i3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bjutb"]
 animations = [{
@@ -25,9 +26,13 @@ amount = 0
 item_id = 0
 state = true
 
+[node name="Area2D" parent="." index="0"]
+position = Vector2(0, 0)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_bjutb")
 animation = &"formed"
+script = ExtResource("3_fx3i3")
 
 [node name="LifeTimer" type="Timer" parent="." index="2"]
 wait_time = 10.0

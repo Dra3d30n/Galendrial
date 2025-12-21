@@ -5,10 +5,12 @@
 
 [node name="Ore" instance=ExtResource("1_an15x")]
 script = ExtResource("2_p36qi")
-level = 1
 
 [node name="Area2D" parent="." index="0"]
 z_index = 0
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+position = Vector2(0, 0)
 
 [node name="LifeTimer" parent="." index="2"]
 wait_time = 60.0

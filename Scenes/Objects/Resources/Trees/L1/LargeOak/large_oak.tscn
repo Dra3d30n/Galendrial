@@ -92,6 +92,3 @@ Name = "Large Oak"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_m0rri")
-animation = &"destroyed"
-frame = 15
-frame_progress = 1.0

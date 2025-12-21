@@ -23,5 +23,17 @@ animations = [{
 amount = 1
 item_id = 12
 
+[node name="Area2D" parent="." index="0"]
+visible = true
+script = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_71svs")
+script = null
+
+[node name="LifeTimer" parent="." index="2"]
+script = null
+
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

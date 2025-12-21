@@ -88,8 +88,13 @@ amount = 4
 item_id = 4
 Name = "Dead Tree"
 
+[node name="Area2D" parent="." index="0"]
+visible = true
+
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_8ed5e")
-animation = &"destroyed"
-frame = 15
-frame_progress = 1.0
+
+[node name="LifeTimer" parent="." index="2"]
+script = null
+
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

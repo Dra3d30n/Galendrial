@@ -2,22 +2,31 @@ extends Node
 
 var scenes = {
 	"Player":"res://Scenes/Objects/Entities/Player/player.tscn",
-	"SmallStone":"res://Scenes/Objects/Resources/Ores/L1/SmallStone/small_stone.tscn",
-	"LargeStone":"res://Scenes/Objects/Resources/Ores/L1/LargeStone/large_stone.tscn"
 	
+	#ores
+		##metals
+			"SmallStone":"res://Scenes/Objects/Resources/Ores/L1/SmallStone/small_stone.tscn",
+			"LargeStone":"res://Scenes/Objects/Resources/Ores/L1/LargeStone/large_stone.tscn",
+			"Copper":"res://Scenes/Objects/Resources/Ores/L2/Copper/copper.tscn",
+			"Tin":"res://Scenes/Objects/Resources/Ores/L2/Tin/tin.tscn",
+			"Iron":"res://Scenes/Objects/Resources/Ores/L3/Iron/iron.tscn",
+			"Gold":"res://Scenes/Objects/Resources/Ores/L3/Gold/gold.tscn",
+			"Adamantite":"res://Scenes/Objects/Resources/Ores/L4/Adamantite/adamantite.tscn",
+		##crystals
+			"Azure Crystal":"res://Scenes/Objects/Resources/Ores/L2/ManaStone/azure_crystal.tscn",
+			"Violet Crystal":"res://Scenes/Objects/Resources/Ores/L3/VioletCrystal/violet_crystal.tscn",
+			"Crimson Crystal":"res://Scenes/Objects/Resources/Ores/L4/CrimsonCrystal/crimson_crystal.tscn"
+	#trees
 }
 var ObjectMap = [
 	[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
 ]
-#func _physics_process(delta: float) -> void:
-	#if not multiplayer.is_server():
-		#print(ObjectMap[0])
+
 func request_full_sync():
 	full_sync.rpc_id(1,multiplayer.get_unique_id())
 @rpc("reliable","any_peer")
 func full_sync(NetworkID):
 	if multiplayer.is_server():
-		print(ObjectMap)
 		for z in ObjectMap:
 			for object in z:
 				var scene_key=""
@@ -47,7 +56,6 @@ func rpc_spawn(id: String, z: int, pos: Vector2, data := {}):
 		rpc("rpc_spawn", id, z, pos, data)
 		spawn_internal(id, z, pos, data)
 		return
-	print(multiplayer.get_unique_id())
 	# Both clients and server spawn locally
 	spawn_internal(id, z, pos, data)
 # ─────────────────────────────────────────────

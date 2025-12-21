@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=8 format=3 uid="uid://5jujdxjxe70"]
+[gd_resource type="TileSet" load_steps=36 format=3 uid="uid://5jujdxjxe70"]
 
 [ext_resource type="PackedScene" uid="uid://b5qpbsyf17hcf" path="res://Scenes/Objects/Resources/Ores/L1/LargeStone/large_stone.tscn" id="1_8hdr5"]
 [ext_resource type="PackedScene" uid="uid://d05sjxob121p4" path="res://Scenes/Objects/Resources/Ores/L1/SmallStone/small_stone.tscn" id="2_hgrmr"]
@@ -6,6 +6,29 @@
 [ext_resource type="PackedScene" uid="uid://cxbuo64ec8fvy" path="res://Scenes/Objects/Resources/Ores/L2/Tin/tin.tscn" id="4_jdqf0"]
 [ext_resource type="PackedScene" uid="uid://col1hinbggsvf" path="res://Scenes/Objects/Resources/Ores/L3/Gold/gold.tscn" id="5_q1ggv"]
 [ext_resource type="PackedScene" uid="uid://c5o531tb70eh5" path="res://Scenes/Objects/Resources/Ores/L3/Iron/iron.tscn" id="6_gav23"]
+[ext_resource type="PackedScene" uid="uid://dty5xeg2f4baa" path="res://Scenes/Objects/Interactables/Crafting/Herbalism/AlchemyTable/alchemy_table.tscn" id="7_agype"]
+[ext_resource type="PackedScene" uid="uid://daus77my12obo" path="res://Scenes/Objects/Resources/Ores/L4/Adamantite/adamantite.tscn" id="7_b3ren"]
+[ext_resource type="PackedScene" uid="uid://d1qpgv17gxj7u" path="res://Scenes/Objects/Interactables/Crafting/Hunting/Spindle/spindle.tscn" id="8_e0t3j"]
+[ext_resource type="PackedScene" uid="uid://dguhgdfy5k2y6" path="res://Scenes/Objects/Interactables/Crafting/Hunting/Tanning/tanning.tscn" id="9_6uqsx"]
+[ext_resource type="PackedScene" uid="uid://cjj1rjotngl3p" path="res://Scenes/Objects/Interactables/Crafting/Metalgery/Anvil/anvil.tscn" id="10_p760e"]
+[ext_resource type="PackedScene" uid="uid://u821i0geuup1" path="res://Scenes/Objects/Interactables/Crafting/Metalgery/Furnace/furnace.tscn" id="11_jget1"]
+[ext_resource type="PackedScene" uid="uid://bjcbesolna6ok" path="res://Scenes/Objects/Resources/Trees/L1/AutumnOak/autumn_oak.tscn" id="12_yfx63"]
+[ext_resource type="PackedScene" uid="uid://c3gcdirifbbhx" path="res://Scenes/Objects/Resources/Trees/L1/DeadTree/dead_tree.tscn" id="13_x0xf3"]
+[ext_resource type="PackedScene" uid="uid://d830rlnv7cc5" path="res://Scenes/Objects/Resources/Trees/L1/LargeOak/large_oak.tscn" id="14_gb75k"]
+[ext_resource type="PackedScene" uid="uid://dod0yi1xi65uy" path="res://Scenes/Objects/Resources/Trees/L1/SmallOak/small_oak.tscn" id="15_de3gl"]
+[ext_resource type="PackedScene" uid="uid://b15vq76uvuo48" path="res://Scenes/Objects/Resources/Trees/L2/LargePine/large_pine.tscn" id="16_7slik"]
+[ext_resource type="PackedScene" uid="uid://wdm12les112b" path="res://Scenes/Objects/Resources/Trees/L2/SmallPine/small_pine.tscn" id="17_56kk4"]
+[ext_resource type="PackedScene" uid="uid://c366jqq18bvbv" path="res://Scenes/Objects/Resources/Ores/L2/ManaStone/azure_crystal.tscn" id="19_nbqr4"]
+[ext_resource type="PackedScene" uid="uid://ogw3ntvm3v0q" path="res://Scenes/Objects/Resources/Ores/L3/VioletCrystal/violet_crystal.tscn" id="20_urjw3"]
+[ext_resource type="PackedScene" uid="uid://c764qgsbyu8gt" path="res://Scenes/Objects/Resources/Ores/L4/CrimsonCrystal/crimson_crystal.tscn" id="21_1nf8f"]
+[ext_resource type="PackedScene" uid="uid://cobfdvrfsv5jn" path="res://Scenes/Objects/Interactables/Storage/Chests/Chest/chest.tscn" id="22_sqfgi"]
+[ext_resource type="PackedScene" uid="uid://yjmm0tuvk7r4" path="res://Scenes/Objects/Interactables/Storage/Chests/MiniChest/mini_chest.tscn" id="23_4aohm"]
+[ext_resource type="PackedScene" uid="uid://duc3aib3hpfbu" path="res://Scenes/Objects/Interactables/Storage/Chests/GoldenChest/golden_chest.tscn" id="24_bqf7p"]
+[ext_resource type="PackedScene" uid="uid://bntcqrsjgoij8" path="res://Scenes/Objects/Resources/Flora/Bushes/Bush/bush.tscn" id="25_k06lv"]
+[ext_resource type="PackedScene" uid="uid://bwvx00o5nti0x" path="res://Scenes/Objects/Resources/Flora/Grass/LargeGrass/large_grass.tscn" id="26_p2k4b"]
+[ext_resource type="PackedScene" uid="uid://dnq2ummeohg1r" path="res://Scenes/Objects/Resources/Flora/Grass/LeafyGrass/leafy_grass.tscn" id="27_v7hgl"]
+[ext_resource type="PackedScene" uid="uid://d8mxbds6ydnu" path="res://Scenes/Objects/Resources/Flora/Grass/SmallGrass/small_grass.tscn" id="28_4g2jk"]
+[ext_resource type="PackedScene" uid="uid://4v1cdva73ae5" path="res://Scenes/Objects/Resources/Flora/Hay/LargeHay/large_hay.tscn" id="29_1m3sx"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_j7hpo"]
 resource_name = "Ores"
@@ -15,8 +38,51 @@ scenes/3/scene = ExtResource("3_l05ay")
 scenes/4/scene = ExtResource("4_jdqf0")
 scenes/5/scene = ExtResource("5_q1ggv")
 scenes/6/scene = ExtResource("6_gav23")
+scenes/7/scene = ExtResource("7_b3ren")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3gji8"]
+resource_name = "CraftingStations"
+scenes/1/scene = ExtResource("7_agype")
+scenes/2/scene = ExtResource("8_e0t3j")
+scenes/3/scene = ExtResource("9_6uqsx")
+scenes/4/scene = ExtResource("10_p760e")
+scenes/5/scene = ExtResource("11_jget1")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_m6rje"]
+resource_name = "Trees"
+scenes/1/scene = ExtResource("12_yfx63")
+scenes/2/scene = ExtResource("13_x0xf3")
+scenes/3/scene = ExtResource("14_gb75k")
+scenes/4/scene = ExtResource("15_de3gl")
+scenes/5/scene = ExtResource("16_7slik")
+scenes/6/scene = ExtResource("17_56kk4")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8jwxa"]
+resource_name = "Crystals"
+scenes/1/scene = ExtResource("19_nbqr4")
+scenes/2/scene = ExtResource("20_urjw3")
+scenes/3/scene = ExtResource("21_1nf8f")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hb21u"]
+resource_name = "Storage"
+scenes/4/scene = ExtResource("22_sqfgi")
+scenes/5/scene = ExtResource("23_4aohm")
+scenes/6/scene = ExtResource("24_bqf7p")
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_s0g6i"]
+resource_name = "Flora"
+scenes/1/scene = ExtResource("25_k06lv")
+scenes/2/scene = ExtResource("26_p2k4b")
+scenes/3/scene = ExtResource("27_v7hgl")
+scenes/4/scene = ExtResource("28_4g2jk")
+scenes/5/scene = ExtResource("29_1m3sx")
 
 [resource]
 tile_shape = 1
 tile_size = Vector2i(128, 64)
 sources/0 = SubResource("TileSetScenesCollectionSource_j7hpo")
+sources/1 = SubResource("TileSetScenesCollectionSource_3gji8")
+sources/2 = SubResource("TileSetScenesCollectionSource_m6rje")
+sources/4 = SubResource("TileSetScenesCollectionSource_8jwxa")
+sources/5 = SubResource("TileSetScenesCollectionSource_hb21u")
+sources/6 = SubResource("TileSetScenesCollectionSource_s0g6i")

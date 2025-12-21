@@ -6,7 +6,7 @@
 
 [node name="Item" instance=ExtResource("1_wenkf")]
 script = ExtResource("2_pmgjq")
-ui = ""
+ui = "res://Scenes/UI/UIWidgets/Popups/ItemPopups/base_button_popup.tscn"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." index="0"]
 layout_mode = 0

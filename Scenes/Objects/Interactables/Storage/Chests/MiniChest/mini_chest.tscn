@@ -30,3 +30,4 @@ Name = "Mini Chest"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_27825")
+animation = &"ignored"

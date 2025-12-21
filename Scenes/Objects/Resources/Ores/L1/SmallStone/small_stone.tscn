@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d05sjxob121p4"]
+[gd_scene load_steps=20 format=3 uid="uid://d05sjxob121p4"]
 
 [ext_resource type="PackedScene" uid="uid://bwafw0b471xb0" path="res://Scenes/Objects/Resources/Ores/ore.tscn" id="1_jv6y6"]
 [ext_resource type="Texture2D" uid="uid://bhjqu1ec3jfl7" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0001.png" id="2_gofs8"]
@@ -18,9 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://badi4qes2daqf" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0029.png" id="16_gp5f2"]
 [ext_resource type="Texture2D" uid="uid://dnwcqj8rcr2so" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion Small/0031.png" id="17_s8y21"]
 [ext_resource type="Texture2D" uid="uid://bi1shibq4ccyk" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Stone A12_E.png" id="18_yqkcs"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dh7tx"]
-radius = 30.1496
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_53pay"]
 animations = [{
@@ -91,12 +88,16 @@ amount = 2
 Name = "Small Stone"
 
 [node name="Area2D" parent="." index="0"]
+visible = true
 z_index = 1
-position = Vector2(-12, 64)
-
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(19, 5)
-shape = SubResource("CircleShape2D_dh7tx")
+script = null
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_53pay")
+script = null
+
+[node name="LifeTimer" parent="." index="2"]
+script = null
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

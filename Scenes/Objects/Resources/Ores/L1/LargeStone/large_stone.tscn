@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b5qpbsyf17hcf"]
+[gd_scene load_steps=20 format=3 uid="uid://b5qpbsyf17hcf"]
 
 [ext_resource type="PackedScene" uid="uid://bwafw0b471xb0" path="res://Scenes/Objects/Resources/Ores/ore.tscn" id="1_u18v7"]
 [ext_resource type="Texture2D" uid="uid://dkdiexykghyu0" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0001.png" id="2_yd55a"]
@@ -18,9 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://dajqo3yv87g7k" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0029.png" id="16_qkdqb"]
 [ext_resource type="Texture2D" uid="uid://c1uvgm4iwiwe4" path="res://Assets/Map/FantasyTilesetGameReady/Animations/Destructible tiles/stone explosion large/0031.png" id="17_42w6k"]
 [ext_resource type="Texture2D" uid="uid://cvfw85rqnhmpt" path="res://Assets/Map/FantasyTilesetGameReady/Environment/Stone A2_E.png" id="18_xmotw"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_rxq70"]
-radius = 36.0139
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_snyf7"]
 animations = [{
@@ -93,10 +90,7 @@ amount = 4
 Name = "Large Stone"
 
 [node name="Area2D" parent="." index="0"]
-position = Vector2(-1, 71)
-
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-shape = SubResource("CircleShape2D_rxq70")
+position = Vector2(0, 0)
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_snyf7")
