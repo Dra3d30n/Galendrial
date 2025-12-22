@@ -87,6 +87,5 @@ animations = [{
 Name = "Large Stone"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
-y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_xnt8e")
 frame_progress = 0.658521

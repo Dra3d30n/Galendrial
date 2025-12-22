@@ -15,8 +15,22 @@ var scenes = {
 		##crystals
 			"Azure Crystal":"res://Scenes/Objects/Resources/Ores/L2/ManaStone/azure_crystal.tscn",
 			"Violet Crystal":"res://Scenes/Objects/Resources/Ores/L3/VioletCrystal/violet_crystal.tscn",
-			"Crimson Crystal":"res://Scenes/Objects/Resources/Ores/L4/CrimsonCrystal/crimson_crystal.tscn"
+			"Crimson Crystal":"res://Scenes/Objects/Resources/Ores/L4/CrimsonCrystal/crimson_crystal.tscn",
 	#trees
+	##normal
+		"Dead Tree":"res://Scenes/Objects/Resources/Trees/L1/DeadTree/dead_tree.tscn",
+		"Autumn Oak":"res://Scenes/Objects/Resources/Trees/L1/AutumnOak/autumn_oak.tscn",
+		"Large Oak":"res://Scenes/Objects/Resources/Trees/L1/LargeOak/large_oak.tscn",
+		"Small Oak":"res://Scenes/Objects/Resources/Trees/L1/SmallOak/small_oak.tscn",
+	##pine
+		"Large Pine":"res://Scenes/Objects/Resources/Trees/L2/LargePine/large_pine.tscn",
+		"Small Pine":"res://Scenes/Objects/Resources/Trees/L2/SmallPine/small_pine.tscn",
+	#crafting
+	"Alchemy Table":"res://Scenes/Objects/Interactables/Crafting/Herbalism/AlchemyTable/alchemy_table.tscn",
+	"Spindle":"res://Scenes/Objects/Interactables/Crafting/Hunting/Spindle/spindle.tscn",
+	"Tanning Station":"res://Scenes/Objects/Interactables/Crafting/Hunting/Tanning/tanning.tscn",
+	"Anvil":"res://Scenes/Objects/Interactables/Crafting/Metalgery/Anvil/anvil.tscn",
+	"Furnace":"res://Scenes/Objects/Interactables/Crafting/Metalgery/Furnace/furnace.tscn"
 }
 var ObjectMap = [
 	[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
@@ -141,7 +155,8 @@ func register_existing_objects():
 		register_object(obj)
 
 func register_object(obj: Node):
-	var z =int(str(obj.get_node("../").name))
+
+	var z =int(str(obj.Name))
 	obj.z=z
 	obj.ObjectID = ObjectMap[z].size()
 	ObjectMap[z].append(obj)

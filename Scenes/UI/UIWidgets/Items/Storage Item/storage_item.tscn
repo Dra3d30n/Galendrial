@@ -9,5 +9,3 @@ script = ExtResource("2_3jymv")
 [node name="item" parent="." index="1"]
 offset_right = 15.0
 offset_bottom = 15.0
-
-[connection signal="pressed" from="NinePatchRect/background" to="." method="_on_background_pressed"]

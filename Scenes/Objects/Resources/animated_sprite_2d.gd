@@ -16,3 +16,5 @@ func _process(delta: float) -> void:
 			y_sort_enabled=true
 		if animation=="interacted":
 			play("ignored")
+		if is_in_group("Object"):
+			remove_from_group("Object")

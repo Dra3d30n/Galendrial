@@ -84,12 +84,8 @@ animations = [{
 }]
 
 [node name="LargeHay" instance=ExtResource("1_ulagg")]
-health = 1
-max_health = 1
 Name = "Large Hay"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_74xig")
-animation = &"destroyed"
-frame = 15
-frame_progress = 1.0
+frame_progress = 0.48804

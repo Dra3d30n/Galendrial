@@ -7,7 +7,10 @@ var inventory = []  # Each entry: {"id": id, "amount": n}
 func awake():
 	synchronization_values = ["inventory"]
 	ui_scene_path = ""
+	Actions=["Open"]
 
+func Open():
+	activate()
 
 # Add an item with an amount (default 1)
 func add_item(id, amount = 1) -> bool:

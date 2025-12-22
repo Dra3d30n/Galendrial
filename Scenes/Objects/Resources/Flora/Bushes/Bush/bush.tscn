@@ -32,8 +32,3 @@ script = null
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_71svs")
 script = null
-
-[node name="LifeTimer" parent="." index="2"]
-script = null
-
-[connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

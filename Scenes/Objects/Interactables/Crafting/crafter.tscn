@@ -5,6 +5,7 @@
 
 [node name="Crafter" groups=["Crafting"] instance=ExtResource("1_t43v2")]
 script = ExtResource("2_ylja0")
+ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Crafting/crafting_base.tscn"
 Name = "Crafting Station"
 
 [node name="Area2D" parent="." index="0"]

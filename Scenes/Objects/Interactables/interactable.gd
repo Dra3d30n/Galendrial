@@ -7,7 +7,9 @@ extends "res://Scenes/Objects/object.gd"
 var current_ui: Node = null
 
 func awake():
-	synchronization_values=[]
+	synchronization_values=["state"]
+	
+	
 
 
 @rpc("any_peer", "call_local")
@@ -49,5 +51,5 @@ func active_object_changed(new_object: Node) -> void:
 
 func update(delta):
 	if Current and GameState.active_object == self:
-		if global_position.distance_squared_to(GameState.active_player) >= (distance_threshold * distance_threshold):
+		if global_position.distance_squared_to(GameState.active_player.global_position) >= (distance_threshold * distance_threshold):
 			deactivate()

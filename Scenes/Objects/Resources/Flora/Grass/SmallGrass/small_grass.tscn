@@ -84,12 +84,8 @@ animations = [{
 }]
 
 [node name="SmallGrass" instance=ExtResource("1_c3mk8")]
-health = 1
-max_health = 1
 Name = "Small Grass"
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_0e4vn")
-animation = &"destroyed"
-frame = 15
-frame_progress = 1.0
+frame_progress = 0.917515
