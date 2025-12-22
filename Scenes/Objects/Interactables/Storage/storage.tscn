@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dcs62mx1bds05" path="res://Scenes/Objects/Interactables/interactable.tscn" id="1_lju0w"]
 [ext_resource type="Script" path="res://Scenes/Objects/Interactables/Storage/storage.gd" id="2_mispl"]
 
-[node name="Storage" instance=ExtResource("1_lju0w")]
+[node name="Storage" groups=["Storage"] instance=ExtResource("1_lju0w")]
 script = ExtResource("2_mispl")
 max_size = 0
 

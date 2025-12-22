@@ -7,6 +7,7 @@ var active_ui=null
 @onready var timer=$"HoverTimer"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	awake()
 	pass # Replace with function body.
 
 
@@ -15,7 +16,7 @@ func _process(delta: float) -> void:
 	
 	if Items.items[item_name]["texture"]!=$"item".texture:
 		$"item".texture=Items.items[item_name]["texture"]
-	awake()
+	
 func awake():
 	pass
 func _input(event: InputEvent) -> void:

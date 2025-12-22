@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c4ge78onre18i" path="res://Scenes/Objects/Entities/Helpers/animators.tscn" id="2_524p8"]
 [ext_resource type="Script" path="res://Scenes/Objects/Entities/entitiy.gd" id="2_elcw4"]
 
-[node name="Entitiy" instance=ExtResource("1_iepnd")]
+[node name="Entitiy" groups=["Entity"] instance=ExtResource("1_iepnd")]
 script = ExtResource("2_elcw4")
 
 [node name="Animators" parent="." index="1" instance=ExtResource("2_524p8")]

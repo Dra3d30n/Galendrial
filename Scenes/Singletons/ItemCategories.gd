@@ -5,3 +5,8 @@ var equipped_key={
 	"pickaxe":"tool",
 	
 }
+var actions={
+	"resource":["Drop"],
+	"tool":["Drop"],
+	"resource":["Drop"],
+}

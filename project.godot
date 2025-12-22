@@ -23,6 +23,11 @@ UiManager="*res://Scenes/Singletons/UIManager.gd"
 CraftingRecipes="*res://Scenes/Singletons/CraftingRecipes.gd"
 Util="*res://Scenes/Singletons/Util.gd"
 Items="*res://Scenes/Singletons/Items.gd"
+<<<<<<< HEAD
+UiDecoder="*res://Scenes/Singletons/UIDecoder.gd"
+ItemCategories="*res://Scenes/Singletons/ItemCategories.gd"
+=======
+>>>>>>> parent of 2cacdd2b (Fix 4)
 
 [display]
 

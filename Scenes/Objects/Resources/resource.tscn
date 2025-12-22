@@ -26,10 +26,8 @@ amount = 0
 item_id = 0
 state = true
 
-[node name="Area2D" parent="." index="0"]
-position = Vector2(0, 0)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" groups=["Object"]]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_bjutb")
 animation = &"formed"
 script = ExtResource("3_fx3i3")
