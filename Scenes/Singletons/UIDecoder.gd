@@ -7,6 +7,7 @@ var tools={
 	},
 	
 }
-var groups_to_actions={
-	"Storage":""
-}
+var GroupsForInventory=[
+	"Chest",
+
+]

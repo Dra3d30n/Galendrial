@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://lm7flcenwth7"]
+[gd_scene load_steps=9 format=3 uid="uid://lm7flcenwth7"]
 
 [ext_resource type="PackedScene" uid="uid://bet055jldfxdj" path="res://Scenes/UI/ui_root.tscn" id="1_gblbn"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWindows/ui_window.gd" id="2_np3x6"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWindows/window_manager.gd" id="2_psr7l"]
 [ext_resource type="Texture2D" uid="uid://bjjp2eg07rtlm" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Window_Header.png" id="3_vl0k1"]
+[ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="5_my18w"]
 [ext_resource type="LabelSettings" uid="uid://dk4lhu3u3bgbk" path="res://Assets/Fonts/base_title_24.tres" id="5_nxyd2"]
+[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="6_l7nn7"]
+[ext_resource type="Script" path="res://Scenes/UI/UIWindows/exit.gd" id="6_qdh5t"]
 
 [node name="UIWindow" instance=ExtResource("1_gblbn")]
 mouse_filter = 2
@@ -12,8 +15,8 @@ script = ExtResource("2_np3x6")
 
 [node name="WindowManager" type="Control" parent="." index="0"]
 anchors_preset = 0
-offset_right = 219.0
-offset_bottom = 73.0
+offset_right = 298.0
+offset_bottom = 153.0
 script = ExtResource("2_psr7l")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="WindowManager" index="0"]
@@ -30,6 +33,26 @@ patch_margin_top = 25
 patch_margin_right = 3
 patch_margin_bottom = 3
 
+[node name="Exit" type="TextureButton" parent="WindowManager" index="1"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -22.0
+offset_top = 6.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_my18w")
+script = ExtResource("6_qdh5t")
+
+[node name="Label" type="Label" parent="WindowManager/Exit" index="0"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 23.0
+text = "X"
+label_settings = ExtResource("6_l7nn7")
+
 [node name="Title" type="Label" parent="." index="1"]
 layout_mode = 0
 offset_left = 4.0
@@ -38,3 +61,5 @@ offset_right = 55.0
 offset_bottom = 27.0
 text = "Chest"
 label_settings = ExtResource("5_nxyd2")
+
+[connection signal="pressed" from="WindowManager/Exit" to="WindowManager" method="_on_exit_pressed"]

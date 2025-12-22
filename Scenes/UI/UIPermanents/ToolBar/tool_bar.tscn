@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://doemrnrvbs07e"]
+
+[ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="1_y2dim"]
+[ext_resource type="PackedScene" uid="uid://bhwbwpgtmgi5g" path="res://Scenes/UI/UIPermanents/ToolBar/tool_node.tscn" id="2_7a76d"]
+
+[node name="ToolBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 235.0
+offset_bottom = 52.0
+texture = ExtResource("1_y2dim")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 188.0
+offset_bottom = 44.0
+theme_override_constants/separation = 46
+
+[node name="ToolNode" parent="HBoxContainer" instance=ExtResource("2_7a76d")]
+layout_mode = 2
+
+[node name="ToolNode2" parent="HBoxContainer" instance=ExtResource("2_7a76d")]
+layout_mode = 2
+
+[node name="ToolNode3" parent="HBoxContainer" instance=ExtResource("2_7a76d")]
+layout_mode = 2
+
+[node name="ToolNode4" parent="HBoxContainer" instance=ExtResource("2_7a76d")]
+layout_mode = 2
+
+[node name="ToolNode5" parent="HBoxContainer" instance=ExtResource("2_7a76d")]
+layout_mode = 2

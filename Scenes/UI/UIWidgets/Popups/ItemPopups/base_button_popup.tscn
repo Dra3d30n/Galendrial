@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctw8yilk36brr"]
+[gd_scene load_steps=4 format=3 uid="uid://ctw8yilk36brr"]
 
+[ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Popups/ItemPopups/base_button_popup.gd" id="1_7w8a6"]
 [ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="1_bl1pm"]
 [ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_eurhm"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7w8a6")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -26,9 +28,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -2.0
-offset_top = -1.0
+offset_top = -2.0
 offset_right = 2.0
-offset_bottom = -5.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_eurhm")

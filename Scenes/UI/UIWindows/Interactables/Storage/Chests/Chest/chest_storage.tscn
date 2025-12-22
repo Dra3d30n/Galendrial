@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://hblqfmd2vj4e"]
+[gd_scene load_steps=4 format=3 uid="uid://hblqfmd2vj4e"]
 
 [ext_resource type="PackedScene" uid="uid://cjnl430j4cw41" path="res://Scenes/UI/UIWindows/Interactables/Storage/base_storage.tscn" id="1_24tuc"]
 [ext_resource type="PackedScene" uid="uid://b1sh2gr07y2kk" path="res://Scenes/UI/UIWidgets/Items/Storage Item/storage_item.tscn" id="2_umesc"]
+
+[sub_resource type="GDScript" id="GDScript_x0g2o"]
+script/source = "@tool
+extends TextureButton
+
+func _process(delta: float) -> void:
+	# Only try this if in the editor
+	if Engine.is_editor_hint():
+		# Set top-right anchors
+		self.set_anchors_preset(Control.PRESET_TOP_RIGHT)
+		# Optional: reset offsets so it hugs the corner
+		self.offset_left = -self.rect_size.x
+		self.offset_top = 0
+		self.offset_right = 0
+		self.offset_bottom = self.rect_size.y
+"
 
 [node name="ChestStorage" instance=ExtResource("1_24tuc")]
 
@@ -12,6 +28,12 @@ offset_bottom = 112.0
 [node name="NinePatchRect" parent="WindowManager" index="0"]
 offset_right = 1.0
 offset_bottom = -2.0
+
+[node name="Exit" parent="WindowManager" index="1"]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 52.0
+script = SubResource("GDScript_x0g2o")
 
 [node name="GridContainer" parent="." index="1"]
 offset_left = 6.0

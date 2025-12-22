@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://lm7flcenwth7" path="res://Scenes/UI/UIWindows/ui_window.tscn" id="1_3v0k4"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWindows/Interactables/Storage/base_storage.gd" id="2_r0m30"]
 
-[node name="BaseStorage" instance=ExtResource("1_3v0k4")]
+[node name="BaseStorage" groups=["Chest"] instance=ExtResource("1_3v0k4")]
 script = ExtResource("2_r0m30")
 
 [node name="WindowManager" parent="." index="0"]

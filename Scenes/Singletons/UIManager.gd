@@ -1,5 +1,6 @@
 extends Node
 var UIBase: Node
+var inventory_movement=["Inventory","Equippement"]
 
 var console=null
 @onready var open_windows=[]
@@ -9,7 +10,7 @@ func init() -> void:
 		return
 	UIBase = get_tree().current_scene.get_node("UI")
 	console=UIBase.get_node("Console")
-	print(console)
+	
 	open_windows=UIBase.get_children()
 func is_ui_open(scene_path: String) -> bool:
 	for ui in open_windows:
@@ -24,6 +25,7 @@ func open_ui(scene_path: String) -> Node:
 
 	var instance = load(scene_path).instantiate()
 	UIBase.add_child(instance)
+
 	open_windows.append(instance)
 	return instance
 

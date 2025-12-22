@@ -100,3 +100,7 @@ func clamp_to_screen():
 		pos.y = 0
 
 	position = pos
+
+
+func _on_exit_pressed() -> void:
+	UiManager.close_ui(str($"..".name))

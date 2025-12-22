@@ -1,5 +1,5 @@
 extends Control
-
+var inventory_pos=null
 var item_name=null
 var hovered=false
 var active_ui=null
@@ -20,18 +20,18 @@ func _process(delta: float) -> void:
 func awake():
 	pass
 func _input(event: InputEvent) -> void:
+	
 	if Input.is_action_just_pressed("LeftMouse"):
-		UiManager.close_ui(str(active_ui.name))
-
-func _on_background_mouse_entered() -> void:
-	hovered=true
-	timer.start()
+		if active_ui:
+			UiManager.close_ui(str(active_ui.name))
+	
 
 
-func _on_background_mouse_exited() -> void:
-	hovered=false
-
-func _on_hover_timer_timeout() -> void:
-	if hovered:
+func _on_background_pressed() -> void:
+	if Input.is_action_just_pressed("RightMouse"):
 		active_ui=UiManager.open_ui(ui)
 		active_ui.global_position=get_global_mouse_position()
+		active_ui.link=self
+		pressed()
+func pressed():
+	pass

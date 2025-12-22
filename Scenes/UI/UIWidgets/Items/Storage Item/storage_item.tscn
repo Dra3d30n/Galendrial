@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1sh2gr07y2kk"]
+[gd_scene load_steps=3 format=3 uid="uid://b1sh2gr07y2kk"]
 
 [ext_resource type="PackedScene" uid="uid://dx6fr5taywvcx" path="res://Scenes/UI/UIWidgets/Items/item.tscn" id="1_j7rbk"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Items/Storage Item/storage_item.gd" id="2_3jymv"]
-[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="3_7jj6k"]
 
 [node name="StorageItem" instance=ExtResource("1_j7rbk")]
 script = ExtResource("2_3jymv")
@@ -10,14 +9,5 @@ script = ExtResource("2_3jymv")
 [node name="item" parent="." index="1"]
 offset_right = 15.0
 offset_bottom = 15.0
-
-[node name="Label" type="Label" parent="." index="3"]
-layout_mode = 0
-offset_left = -2.0
-offset_top = -6.0
-offset_right = 5.0
-offset_bottom = 10.0
-text = "8"
-label_settings = ExtResource("3_7jj6k")
 
 [connection signal="pressed" from="NinePatchRect/background" to="." method="_on_background_pressed"]

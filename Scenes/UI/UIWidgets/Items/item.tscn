@@ -38,4 +38,5 @@ one_shot = true
 
 [connection signal="mouse_entered" from="NinePatchRect/background" to="." method="_on_background_mouse_entered"]
 [connection signal="mouse_exited" from="NinePatchRect/background" to="." method="_on_background_mouse_exited"]
+[connection signal="pressed" from="NinePatchRect/background" to="." method="_on_background_pressed"]
 [connection signal="timeout" from="HoverTimer" to="." method="_on_hover_timer_timeout"]

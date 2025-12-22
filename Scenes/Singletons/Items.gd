@@ -65,4 +65,9 @@ var items={
 		"type":"resource",
 		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
 	},
+	13:{
+		"name":"Thyme",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+		}
 }

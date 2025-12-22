@@ -23,11 +23,7 @@ UiManager="*res://Scenes/Singletons/UIManager.gd"
 CraftingRecipes="*res://Scenes/Singletons/CraftingRecipes.gd"
 Util="*res://Scenes/Singletons/Util.gd"
 Items="*res://Scenes/Singletons/Items.gd"
-<<<<<<< HEAD
 UiDecoder="*res://Scenes/Singletons/UIDecoder.gd"
-ItemCategories="*res://Scenes/Singletons/ItemCategories.gd"
-=======
->>>>>>> parent of 2cacdd2b (Fix 4)
 
 [display]
 
@@ -40,6 +36,11 @@ window/stretch/mode="viewport"
 LeftMouse={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(215, 24),"global_position":Vector2(224, 70),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+RightMouse={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(82, 25),"global_position":Vector2(91, 71),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
 
