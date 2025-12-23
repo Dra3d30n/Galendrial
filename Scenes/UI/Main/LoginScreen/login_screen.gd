@@ -30,8 +30,7 @@ func _on_peer_connected(i):
 func _on_peer_disconnected(i):
 	print("peer disconnecte",i)
 func open_player():
-	ObjectFactory.request_full_sync()
-	await get_tree().create_timer(1.0).timeout
+	#await get_tree().create_timer(.1).timeout
 	print(ObjectFactory.request_spawn("Player",0,Vector2(0,0),{"NetworkID":GameState.active_id}))
 	
 func open_world():

@@ -9,4 +9,8 @@ ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Crafting/crafting_base.
 Name = "Crafting Station"
 
 [node name="Area2D" parent="." index="0"]
+visible = false
 z_index = 0
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = false

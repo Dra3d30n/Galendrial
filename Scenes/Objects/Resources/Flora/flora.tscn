@@ -7,6 +7,13 @@
 script = ExtResource("2_7qs0q")
 health = 1
 max_health = 1
+Name = "FLora"
+
+[node name="Area2D" parent="." index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = false
 
 [node name="LifeTimer" parent="." index="2"]
 wait_time = 120.0

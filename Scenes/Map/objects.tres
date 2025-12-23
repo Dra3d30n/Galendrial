@@ -1,13 +1,14 @@
-[gd_resource type="TileSet" load_steps=36 format=3 uid="uid://5jujdxjxe70"]
+[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://5jujdxjxe70"]
 
 [ext_resource type="PackedScene" uid="uid://b5qpbsyf17hcf" path="res://Scenes/Objects/Resources/Ores/L1/LargeStone/large_stone.tscn" id="1_8hdr5"]
 [ext_resource type="PackedScene" uid="uid://d05sjxob121p4" path="res://Scenes/Objects/Resources/Ores/L1/SmallStone/small_stone.tscn" id="2_hgrmr"]
 [ext_resource type="PackedScene" uid="uid://chl55r2wuxned" path="res://Scenes/Objects/Resources/Ores/L2/Copper/copper.tscn" id="3_l05ay"]
 [ext_resource type="PackedScene" uid="uid://cxbuo64ec8fvy" path="res://Scenes/Objects/Resources/Ores/L2/Tin/tin.tscn" id="4_jdqf0"]
 [ext_resource type="PackedScene" uid="uid://col1hinbggsvf" path="res://Scenes/Objects/Resources/Ores/L3/Gold/gold.tscn" id="5_q1ggv"]
-[ext_resource type="PackedScene" uid="uid://c5o531tb70eh5" path="res://Scenes/Objects/Resources/Ores/L3/Iron/iron.tscn" id="6_gav23"]
+[ext_resource type="PackedScene" uid="uid://c5o531tb70eh5" path="res://Scenes/Objects/Resources/Ores/L2/Iron/iron.tscn" id="6_d20gk"]
 [ext_resource type="PackedScene" uid="uid://dty5xeg2f4baa" path="res://Scenes/Objects/Interactables/Crafting/Herbalism/AlchemyTable/alchemy_table.tscn" id="7_agype"]
 [ext_resource type="PackedScene" uid="uid://daus77my12obo" path="res://Scenes/Objects/Resources/Ores/L4/Adamantite/adamantite.tscn" id="7_b3ren"]
+[ext_resource type="PackedScene" uid="uid://b5fvicj6w0xf8" path="res://Scenes/Objects/Resources/Ores/L3/Silver/silver.tscn" id="8_7a4aj"]
 [ext_resource type="PackedScene" uid="uid://d1qpgv17gxj7u" path="res://Scenes/Objects/Interactables/Crafting/Hunting/Spindle/spindle.tscn" id="8_e0t3j"]
 [ext_resource type="PackedScene" uid="uid://dguhgdfy5k2y6" path="res://Scenes/Objects/Interactables/Crafting/Hunting/Tanning/tanning.tscn" id="9_6uqsx"]
 [ext_resource type="PackedScene" uid="uid://cjj1rjotngl3p" path="res://Scenes/Objects/Interactables/Crafting/Metalgery/Anvil/anvil.tscn" id="10_p760e"]
@@ -37,8 +38,9 @@ scenes/2/scene = ExtResource("2_hgrmr")
 scenes/3/scene = ExtResource("3_l05ay")
 scenes/4/scene = ExtResource("4_jdqf0")
 scenes/5/scene = ExtResource("5_q1ggv")
-scenes/6/scene = ExtResource("6_gav23")
+scenes/6/scene = ExtResource("6_d20gk")
 scenes/7/scene = ExtResource("7_b3ren")
+scenes/8/scene = ExtResource("8_7a4aj")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_3gji8"]
 resource_name = "CraftingStations"

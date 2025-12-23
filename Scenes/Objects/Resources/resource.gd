@@ -6,14 +6,23 @@ extends "res://Scenes/Objects/object.gd"
 @export var item_id: int = 0
 @export var state: bool = true    
 
-@rpc("any_peer", "call_local") func rpc_destroy():
+@rpc("any_peer","reliable" ) 
+func rpc_destroy():
 	destroy()
 
-@rpc("any_peer", "call_local") func rpc_form():
+@rpc("any_peer","reliable" ) 
+func rpc_form():
 	form()
+
+
 func awake():
 	awaken_values()
 	synchronization_values=["health","state"]
+	match state:
+		true:
+			$AnimatedSprite2D.play("formed")
+		false:
+			$AnimatedSprite2D.play("destroyed")
 
 
 func awaken_values():
@@ -34,8 +43,8 @@ func harvest(item: int):
 		request_destroy()
 
 func request_destroy():
-	client_destroy.rpc()
-@rpc("reliable")
+	client_destroy.rpc_id(1)
+@rpc("reliable","any_peer")
 func client_destroy():
 	if multiplayer.is_server():
 		rpc_destroy.rpc()

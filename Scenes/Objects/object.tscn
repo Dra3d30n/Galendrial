@@ -8,12 +8,10 @@ y_sort_enabled = true
 script = ExtResource("1_ikcks")
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 z_index = 1
 script = ExtResource("2_bpuhm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-visible = false
 polygon = PackedVector2Array(0, 48, -64, 80, 0, 112, 64, 80)
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

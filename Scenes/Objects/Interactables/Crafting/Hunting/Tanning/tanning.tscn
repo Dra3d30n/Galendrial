@@ -20,14 +20,15 @@ animations = [{
 }]
 
 [node name="TanningStation" instance=ExtResource("1_ephmc")]
-ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Crafting/crafting_base.tscn"
 Name = "Tanning Station"
 
 [node name="Area2D" parent="." index="0"]
-visible = true
 script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+[node name="CollisionPolygon2D" parent="Area2D" index="1"]
+visible = false
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_bpmse")

@@ -1,14 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cn67bpgnfvlar"]
 
 [ext_resource type="PackedScene" uid="uid://lm7flcenwth7" path="res://Scenes/UI/UIWindows/ui_window.tscn" id="1_3gn51"]
-[ext_resource type="FontFile" uid="uid://cj3a27bug764v" path="res://Assets/Fonts/RuneScape_UF/runescape_uf.ttf" id="2_6bcko"]
+[ext_resource type="FontFile" uid="uid://b37somxbekyrc" path="res://Assets/Fonts/RuneScape_UF/runescape_uf.ttf" id="2_6bcko"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWindows/Console/console.gd" id="2_l5hax"]
 
 [node name="Console" instance=ExtResource("1_3gn51")]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
 script = ExtResource("2_l5hax")
 
 [node name="WindowManager" parent="." index="0"]
@@ -30,3 +26,9 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_6bcko")
 bbcode_enabled = true
 scroll_following = true
+
+[node name="Exit" parent="WindowManager" index="2"]
+visible = false
+
+[node name="Title" parent="WindowManager" index="3"]
+text = "Console"

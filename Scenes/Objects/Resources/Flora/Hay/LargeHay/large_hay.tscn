@@ -84,7 +84,15 @@ animations = [{
 }]
 
 [node name="LargeHay" instance=ExtResource("1_ulagg")]
+amount = 1
+item_id = 14
 Name = "Large Hay"
+
+[node name="Area2D" parent="." index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = false
 
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_74xig")

@@ -2,7 +2,7 @@ extends Node2D
 
 # -----------------------------
 # Exports / variables
-# -----------------------------\
+# -----------------------------
 @export var Name="Object"
 @export var NetworkID: int = 1
 @export var ObjectID: int = 1
@@ -20,13 +20,20 @@ func update_position(pos: Vector2):
 	global_position = pos
 
 func _ready() -> void:
-	name=str(ObjectID)
+	name = str(ObjectID)
 	last_synced_position = global_position
-	if multiplayer.get_unique_id()==NetworkID:
-		multiplayer_authority=true
+	if multiplayer.get_unique_id() == NetworkID:
+		multiplayer_authority = true
 	awake()
-	
+
 	synchronization_values.append_array(["NetworkID","ObjectID"])
+
+	# -----------------------
+	# Safe connection for Area2D clicks
+	# -----------------------
+	if $Area2D and not $Area2D.input_event.is_connected(_on_area_2d_input_event):
+		$Area2D.input_event.connect(_on_area_2d_input_event)
+
 
 func awake():
 	pass  # custom logic
@@ -35,7 +42,7 @@ func interact(action: String):
 	if action in self:
 		self.call(action)
 func _physics_process(delta: float) -> void:
-	can_render()
+	
 	if not multiplayer.is_server():
 		
 		if multiplayer_authority:
@@ -60,12 +67,15 @@ func update(delta):
 func can_render(): 
 	if not GameState.active_player:
 		Current=true
-		return
+		return Current
 	var Margin=50 
-	if abs(GameState.active_player.global_position.x-global_position.x)>960+Margin or abs(GameState.active_player.global_position.y-global_position.y)>540+Margin: 
+	var dist_x=abs(GameState.active_player.global_position.x-global_position.x)
+	var dist_y=abs(GameState.active_player.global_position.y-global_position.y)
+	if dist_x>960+Margin or dist_y>540+Margin: 
 		Current=false 
 	else:
 		Current=true
+	return Current
 func export_sync():
 	pass
 func sync():
@@ -90,7 +100,6 @@ func full_sync(id):
 	for value in synchronization_values:
 		if value in self:
 			data[value] = get(value)
-
 	init.rpc_id(id,data)
 @rpc("any_peer","unreliable")
 func init(data := {}):

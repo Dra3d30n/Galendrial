@@ -8,4 +8,8 @@ script = ExtResource("2_mispl")
 max_size = 0
 
 [node name="Area2D" parent="." index="0"]
+visible = false
 z_index = 0
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = false

@@ -57,9 +57,12 @@ var goal_handlers := {
 	"harvest": "handle_harvest",
 	"hitstun": "handle_hitstun",
 	"attack": "handle_attack",
-	"add_item":"handle_add_item"
+	"add_item":"handle_add_item",
+	"activate":"handle_activate"
 }
-
+func handle_activate(vars):
+	vars[0].activate()
+	return Vector2.ZERO
 func match_goals() -> Vector2:
 	if len(goals)<=0:
 		return Vector2.ZERO

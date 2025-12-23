@@ -6,5 +6,11 @@
 [node name="Tree" instance=ExtResource("1_6wbyr")]
 script = ExtResource("2_mn1w2")
 
+[node name="Area2D" parent="." index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = false
+
 [node name="LifeTimer" parent="." index="2"]
 wait_time = 90.0

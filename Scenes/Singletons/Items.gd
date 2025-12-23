@@ -66,8 +66,23 @@ var items={
 		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
 	},
 	13:{
-		"name":"Thyme",
+		"name":"Grass",
 		"type":"resource",
 		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+		},
+	14:{
+		"name":"Hay",
+		"type":"resource",
+		"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+		},
+		15:{
+			"name":"Silver",
+			"type":"resource",
+			"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
+		},
+		16:{
+			"name":"Moss",
+			"type":"resource",
+			"texture":"res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png"
 		}
 }

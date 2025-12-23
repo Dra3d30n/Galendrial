@@ -11,5 +11,5 @@ func _process(_delta):
 			position = fixed_position
 		if $"CollisionPolygon2D".position!=fixed_position:
 			$"CollisionPolygon2D".position=fixed_position
-		if visible:
-			visible=false
+		if  not visible:
+			visible=true

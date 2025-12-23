@@ -28,6 +28,12 @@ max_size = 4
 ui_scene_path = "res://Scenes/UI/UIWindows/Interactables/Storage/Chests/MiniChest/mini_chest_ui.tscn"
 Name = "Mini Chest"
 
+[node name="Area2D" parent="." index="0"]
+visible = false
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+visible = false
+
 [node name="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_27825")
 animation = &"ignored"

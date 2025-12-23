@@ -8,7 +8,11 @@ var current_ui: Node = null
 
 func awake():
 	synchronization_values=["state"]
-	
+	match state:
+		true:
+			$AnimatedSprite2D.play("interacted")
+		false:
+			$AnimatedSprite2D.play("ignored")
 	
 
 
