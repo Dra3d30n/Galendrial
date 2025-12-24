@@ -17,7 +17,6 @@ func _input(event):
 		var localMousePos = get_local_mouse_position()
 		if abs(get_global_mouse_position().y-global_position.y) < GrabThreshold:
 			start = event.position 
-			print(start)
 
 			initialPosition = global_position
 			isMoving = true

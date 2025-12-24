@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://kiroykyyilnp"]
+[gd_scene load_steps=4 format=3 uid="uid://kiroykyyilnp"]
 
+[ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Popups/ItemPopups/inventory_item_action.gd" id="1_nchrl"]
 [ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="1_u7djh"]
 [ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="2_rldrg"]
 
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_nchrl")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 1
@@ -34,3 +36,15 @@ offset_right = 42.0
 offset_bottom = 25.0
 text = "Sup"
 label_settings = ExtResource("2_rldrg")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

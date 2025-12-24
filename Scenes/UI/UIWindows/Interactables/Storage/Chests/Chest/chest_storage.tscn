@@ -38,8 +38,8 @@ script = SubResource("GDScript_x0g2o")
 [node name="GridContainer" parent="." index="1"]
 offset_left = 6.0
 offset_top = 30.0
-offset_right = 126.0
-offset_bottom = 70.0
+offset_right = 163.0
+offset_bottom = 106.0
 columns = 4
 
 [node name="StorageItem" parent="GridContainer" index="0" instance=ExtResource("2_umesc")]
@@ -65,8 +65,3 @@ layout_mode = 2
 
 [node name="StorageItem8" parent="GridContainer" index="7" instance=ExtResource("2_umesc")]
 layout_mode = 2
-
-[node name="Title" parent="." index="2"]
-offset_left = 3.0
-offset_right = 43.0
-offset_bottom = 26.0

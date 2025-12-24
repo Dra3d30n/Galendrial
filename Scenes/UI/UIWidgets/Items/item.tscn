@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx6fr5taywvcx"]
+[gd_scene load_steps=5 format=3 uid="uid://dx6fr5taywvcx"]
 
 [ext_resource type="PackedScene" uid="uid://bet055jldfxdj" path="res://Scenes/UI/ui_root.tscn" id="1_wenkf"]
 [ext_resource type="Texture2D" uid="uid://boyot0t0bwg4m" path="res://Assets/UI/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_ijx6o"]
 [ext_resource type="Script" path="res://Scenes/UI/UIWidgets/Items/item.gd" id="2_pmgjq"]
+[ext_resource type="LabelSettings" uid="uid://c02m0rv13xnjn" path="res://Assets/Fonts/base_label_16.tres" id="4_0tlx3"]
 
 [node name="Item" instance=ExtResource("1_wenkf")]
 script = ExtResource("2_pmgjq")
+actions = []
 ui = "res://Scenes/UI/UIWidgets/Popups/ItemPopups/base_button_popup.tscn"
+controller = null
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." index="0"]
 layout_mode = 0
@@ -35,6 +38,15 @@ mouse_filter = 2
 
 [node name="HoverTimer" type="Timer" parent="." index="2"]
 one_shot = true
+
+[node name="Amount" type="Label" parent="." index="3"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -3.0
+offset_right = 24.0
+offset_bottom = 13.0
+label_settings = ExtResource("4_0tlx3")
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="NinePatchRect/background" to="." method="_on_background_mouse_entered"]
 [connection signal="mouse_exited" from="NinePatchRect/background" to="." method="_on_background_mouse_exited"]
